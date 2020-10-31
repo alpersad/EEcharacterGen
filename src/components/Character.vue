@@ -12,11 +12,13 @@
       v-bind:chosenclass="character.class"
       v-on:updatehealth="updateHealth"
     />
+    <!--
     <Saves
       v-bind:modifier="character.modifiers"
       v-bind:chosenclass="character.class"
       v-on:updatesaves="updateSaves"
     />
+    -->
     <p>{{ character }}</p>
   </div>
 </template>
@@ -25,7 +27,7 @@
 import Attributes from "./Attributes.vue";
 import Class from "./Class.vue";
 import Health from "./Health.vue";
-import Saves from "./Saves.vue";
+//import Saves from "./Saves.vue";
 
 export default {
   name: "Character",
@@ -33,7 +35,7 @@ export default {
     Attributes,
     Class,
     Health,
-    Saves,
+    //Saves,
   },
   data: function () {
     return {
@@ -78,9 +80,9 @@ export default {
       this.character.flesh = event.flesh;
       this.character.grit = event.grit;
     },
-    updateSaves: function (event) {
+    /*updateSaves: function (event) {
       this.character.saves = event;
-    },
+    },*/
   },
 };
 </script>
