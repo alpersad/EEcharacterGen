@@ -1,6 +1,7 @@
 <template>
   <div>
-    <p>Skills: {{ skills }}</p>
+    <b>SKILLS</b>
+    <p v-for="(value, key) in skills" :key="key">{{ key }}: {{ value }} in 6</p>
   </div>
 </template>
 

@@ -66,7 +66,7 @@ export default {
       equipmentMax: { basic: 0, light: 0, rare: 0 },
       equipmentList: [],
       experience: 0,
-      saves: [],
+      saves: [0, 0, 0, 0, 0],
       armourClass: 10,
       resourceLevel: 1,
       modifiers: [0, 0, 0, 0, 0, 0],
@@ -278,9 +278,9 @@ export default {
       }
     },
 
-    /*-------------------------------------------------------------------
+    /*-----------------------------------------------------------------------------
         Methods used to calculate the Armour Class value of the generated character
-    ---------------------------------------------------------------------*/
+    -------------------------------------------------------------------------------*/
     assignArmourClass: function () {
       this.armourClass = 10 + this.modifiers[Attribute.DEXTERITY];
     },

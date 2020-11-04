@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p>Saving Throws: {{ saves }}</p>
+    <b>SAVES VS</b>
+    <p v-for="(value, key) in SavesVS" :key="key">
+      {{ key }}: {{ saves[value] }}
+    </p>
   </div>
 </template>
 
@@ -28,7 +31,9 @@ export default {
   name: "Saves",
   props: ["saves"],
   data() {
-    return {};
+    return {
+      SavesVS: SavingThrows,
+    };
   },
 };
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <b>HEALTH</b>
     <p>Flesh: {{ flesh }}</p>
     <p>Grit: {{ grit }}</p>
   </div>
