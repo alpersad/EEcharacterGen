@@ -18,9 +18,19 @@
       v-bind:modifiers="modifiers"
       v-on:doppelganger="doppelganger"
     />
-    <Health v-bind:flesh="flesh" v-bind:grit="grit" />
+    <Health
+      v-bind:flesh="flesh"
+      v-bind:grit="grit"
+      v-bind:armourClass="armourClass"
+      v-bind:resourceLevel="resourceLevel"
+    />
     <Saves v-bind:saves="saves" />
-    <Skills v-bind:skills="skills" />
+    <Skills
+      v-bind:skills="skills"
+      v-bind:selectedClass="selectedClass"
+      v-on:reduceskill="reduceSkill"
+      v-on:increaseskill="increaseSkill"
+    />
   </div>
 </template>
 
@@ -48,7 +58,9 @@ export default {
       name: "",
       level: 1,
       attributes: [],
+      baseFlesh: 0,
       flesh: 0,
+      baseGrit: 0,
       grit: 0,
       skills: {
         ATHLETICS: 1,
@@ -63,7 +75,8 @@ export default {
         CHARM: 1,
         CONTACTS: 1,
       },
-      equipmentMax: { basic: 0, light: 0, rare: 0 },
+      skillPoint: 6,
+      equipmentMax: { base: 5, light: 0, rare: 2 },
       equipmentList: [],
       experience: 0,
       saves: [0, 0, 0, 0, 0],
@@ -139,6 +152,12 @@ export default {
           this.modifiers[Attribute[key]] = 3;
         }
       }
+      if (this.selectedClass == "BODYGUARD") {
+        this.modifiers[Attribute.CONSTITUTION] += 1;
+      }
+      if (this.selectedClass == "EXPLORER") {
+        this.modifiers[Attribute.DEXTERITY] += 1;
+      }
     },
 
     /*-------------------------------------------------------------------
@@ -179,18 +198,18 @@ export default {
           //should never enter here
           console.log("Rolling Health: Class selection error");
       }
-      this.flesh =
-        this.rollDice(healthDice) + this.modifiers[Attribute.CONSTITUTION];
-      this.grit =
-        this.rollDice(healthDice) + this.modifiers[Attribute.CONSTITUTION];
+      this.baseFlesh = this.rollDice(healthDice);
+      this.flesh = this.baseFlesh + this.modifiers[Attribute.CONSTITUTION];
+      this.baseGrit = this.rollDice(healthDice);
+      this.grit = this.baseGrit + this.modifiers[Attribute.CONSTITUTION];
 
       this.flesh = this.flesh > 0 ? this.flesh : 1;
       this.grit = this.grit >= 0 ? this.grit : 0;
     },
 
     updateDoppelgangerHealth: function () {
-      this.flesh = this.flesh + this.modifiers[Attribute.CONSTITUTION] * 2;
-      this.grit = this.grit + this.modifiers[Attribute.CONSTITUTION] * 2;
+      this.flesh = this.baseFlesh + this.modifiers[Attribute.CONSTITUTION];
+      this.grit = this.baseGrit + this.modifiers[Attribute.CONSTITUTION];
 
       this.flesh = this.flesh > 0 ? this.flesh : 1;
       this.grit = this.grit >= 0 ? this.grit : 0;
@@ -240,9 +259,9 @@ export default {
       this.saves[SavingThrows.MAGIC] += this.modifiers[Attribute.WISDOM];
     },
 
-    /*-------------------------------------------------------------------
+    /*-----------------------------------------------------------------------
         Methods used to calculate the Skill values of the generated character
-    ---------------------------------------------------------------------*/
+    -------------------------------------------------------------------------*/
     assignSkills: function () {
       // Update the skill chance based on selected class
       for (let key in this.skills) {
@@ -254,8 +273,13 @@ export default {
           break;
         case "EXPLORER":
           this.skills["STEALTH"] = 3;
+          this.skills["ATHLETICS"] = 5;
+          break;
+        case "DOCTOR":
+          this.skills["MEDICINE"] = 5;
           break;
         default:
+        // no modifcation to skills required based on class chosen
       }
       this.skills["ATHLETICS"] += this.modifiers[Attribute.STRENGTH];
       this.skills["VANDALISM"] += this.modifiers[Attribute.STRENGTH];
@@ -278,12 +302,30 @@ export default {
       }
     },
 
+    increaseSkill: function (type) {
+      if (this.skills[type] < 6 && this.skillPoint > 0) {
+        this.skills[type] += 1;
+        this.skillPoint -= 1;
+      }
+    },
+
+    reduceSkill: function (type) {
+      if (this.skills[type] > 0 && this.skillPoint < 6) {
+        this.skills[type] -= 1;
+        this.skillPoint += 1;
+      }
+    },
+
     /*-----------------------------------------------------------------------------
         Methods used to calculate the Armour Class value of the generated character
     -------------------------------------------------------------------------------*/
     assignArmourClass: function () {
       this.armourClass = 10 + this.modifiers[Attribute.DEXTERITY];
     },
+    /*------------------------------------------------------------------------------------
+        Methods used to calculate the maximum equipment allowed of the generated character
+    --------------------------------------------------------------------------------------*/
+    assignEquipmentMax: function () {},
   },
 };
 </script>
