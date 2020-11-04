@@ -1,17 +1,5 @@
 <template>
-  <div>
-    <label for="eeclass"> Select class </label>
-    <select v-model="selectedClass">
-      <option
-        v-on:click="emitClass"
-        v-for="charClass in classList"
-        :key="charClass"
-        v-bind:value="charClass"
-      >
-        {{ charClass }}
-      </option>
-    </select>
-  </div>
+  <div></div>
 </template>
 
 <script>
@@ -29,10 +17,7 @@ export const EEClass = [
 export default {
   name: "Class",
   data: function () {
-    return {
-      classList: EEClass,
-      selectedClass: "",
-    };
+    return {};
   },
   methods: {
     emitClass: function () {
