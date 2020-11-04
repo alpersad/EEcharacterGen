@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p>{{ attributes }}</p>
-    <p>{{ modifiers }}</p>
+    <p>Attributes: {{ attributes }}</p>
+    <p>Modifiers: {{ modifiers }}</p>
     <button v-on:click="$emit('doppelganger')">Doppelganger</button>
   </div>
 </template>

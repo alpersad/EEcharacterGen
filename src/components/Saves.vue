@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ saves }}</p>
+    <p>Saving Throws: {{ saves }}</p>
   </div>
 </template>
 

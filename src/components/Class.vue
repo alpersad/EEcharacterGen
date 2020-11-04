@@ -19,11 +19,6 @@ export default {
   data: function () {
     return {};
   },
-  methods: {
-    emitClass: function () {
-      this.$emit("emitclass", this.selectedClass);
-    },
-  },
 };
 </script>
 

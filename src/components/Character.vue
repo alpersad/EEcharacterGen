@@ -4,7 +4,6 @@
     <label for="eeclass"> Select class </label>
     <select v-model="selectedClass">
       <option
-        v-on:click="emitClass"
         v-for="characterClass in classList"
         :key="characterClass"
         v-bind:value="characterClass"
@@ -12,6 +11,7 @@
         {{ characterClass }}
       </option>
     </select>
+    <p>Class: {{ selectedClass }}</p>
     <button v-on:click="generateCharacter">Generate Character</button>
     <Attributes
       v-bind:attributes="attributes"
@@ -20,6 +20,7 @@
     />
     <Health v-bind:flesh="flesh" v-bind:grit="grit" />
     <Saves v-bind:saves="saves" />
+    <Skills v-bind:skills="skills" />
   </div>
 </template>
 
@@ -27,6 +28,7 @@
 import Attributes from "./Attributes.vue";
 import Health from "./Health.vue";
 import Saves from "./Saves.vue";
+import Skills from "./Skills.vue";
 
 import { EEClass } from "./Class.vue";
 import { Attribute } from "./Attributes.vue";
@@ -39,21 +41,34 @@ export default {
     Attributes,
     Health,
     Saves,
+    Skills,
   },
   data: function () {
     return {
       name: "",
-      level: 0,
+      level: 1,
       attributes: [],
       flesh: 0,
       grit: 0,
-      skills: [],
+      skills: {
+        ATHLETICS: 1,
+        VANDALISM: 1,
+        DRIVING: 1,
+        STEALTH: 1,
+        MEDICINE: 1,
+        TECHNOLOGY: 1,
+        TRANSLATION: 1,
+        FORENSICS: 1,
+        PERCEPTION: 1,
+        CHARM: 1,
+        CONTACTS: 1,
+      },
       equipmentMax: { basic: 0, light: 0, rare: 0 },
       equipmentList: [],
       experience: 0,
       saves: [],
-      armourClass: 0,
-      resourceLevel: 0,
+      armourClass: 10,
+      resourceLevel: 1,
       modifiers: [0, 0, 0, 0, 0, 0],
       spellList: [],
       abilityList: [],
@@ -70,12 +85,26 @@ export default {
     generateCharacter: function () {
       this.rollAttributes();
       this.rollHealth();
-      this.rollSaves();
+      this.assignSaves();
+      this.assignSkills();
+      this.assignArmourClass();
     },
 
-    /*
-        Methods used to roll the Attribute values for the generated character
-    */
+    doppelganger: function () {
+      for (let key in Attribute) {
+        this.attributes[Attribute[key]] = 21 - this.attributes[Attribute[key]];
+      }
+      this.generateModifiers();
+      this.updateDoppelgangerHealth();
+      this.assignSaves();
+      this.assignSkills();
+      this.assignArmourClass();
+    },
+
+    /*-------------------------------------------------------------------
+        Methods used to roll the Attribute values of the generated character
+    ---------------------------------------------------------------------*/
+
     rollAttributes: function () {
       var attributeRoll;
       attributeRoll = this.esotericEnterprisesAttrRoll; // Sets the attribute roll to the chosen d&d system
@@ -88,15 +117,6 @@ export default {
 
     esotericEnterprisesAttrRoll: function () {
       return this.rollDice(6) + this.rollDice(6) + this.rollDice(6);
-    },
-
-    doppelganger: function () {
-      for (let key in Attribute) {
-        this.attributes[Attribute[key]] = 21 - this.attributes[Attribute[key]];
-      }
-      this.generateModifiers();
-      this.updateDoppelgangerHealth();
-      this.updateDoppelgangerSaves();
     },
 
     generateModifiers: function () {
@@ -180,31 +200,31 @@ export default {
         Methods used to roll the Saves values of the generated character
     ---------------------------------------------------------------------*/
 
-    rollSaves: function () {
+    assignSaves: function () {
       switch (this.selectedClass) {
         case "BODYGUARD":
-          this.saves = BaseSaves.BODYGUARD;
+          this.saves = Array.from(BaseSaves.BODYGUARD);
           break;
         case "CRIMINAL":
-          this.saves = BaseSaves.CRIMINAL;
+          this.saves = Array.from(BaseSaves.CRIMINAL);
           break;
         case "DOCTOR":
-          this.saves = BaseSaves.DOCTOR;
+          this.saves = Array.from(BaseSaves.DOCTOR);
           break;
         case "EXPLORER":
-          this.saves = BaseSaves.EXPLORER;
+          this.saves = Array.from(BaseSaves.EXPLORER);
           break;
         case "MERCENARY":
-          this.saves = BaseSaves.MERCENARY;
+          this.saves = Array.from(BaseSaves.MERCENARY);
           break;
         case "OCCULTIST":
-          this.saves = BaseSaves.OCCULTIST;
+          this.saves = Array.from(BaseSaves.OCCULTIST);
           break;
         case "MYSTIC":
-          this.saves = BaseSaves.MYSTIC;
+          this.saves = Array.from(BaseSaves.MYSTIC);
           break;
         case "SPOOK":
-          this.saves = BaseSaves.SPOOK;
+          this.saves = Array.from(BaseSaves.SPOOK);
           break;
         default:
           this.saves = this.saves.splice(0, this.saves.length);
@@ -220,16 +240,49 @@ export default {
       this.saves[SavingThrows.MAGIC] += this.modifiers[Attribute.WISDOM];
     },
 
-    updateDoppelgangerSaves: function () {
-      this.saves[SavingThrows.STUNNING] +=
-        this.modifiers[Attribute.CONSTITUTION] * 2;
-      this.saves[SavingThrows.POISON] +=
-        this.modifiers[Attribute.CONSTITUTION] * 2;
-      this.saves[SavingThrows.HAZARDS] +=
-        this.modifiers[Attribute.DEXTERITY] * 2;
-      this.saves[SavingThrows.MACHINES] +=
-        this.modifiers[Attribute.INTELLIGENCE] * 2;
-      this.saves[SavingThrows.MAGIC] += this.modifiers[Attribute.WISDOM] * 2;
+    /*-------------------------------------------------------------------
+        Methods used to calculate the Skill values of the generated character
+    ---------------------------------------------------------------------*/
+    assignSkills: function () {
+      // Update the skill chance based on selected class
+      for (let key in this.skills) {
+        this.skills[key] = 1;
+      }
+      switch (this.selectedClass) {
+        case "BODYGUARD":
+          this.skills["PERCEPTION"] = 3;
+          break;
+        case "EXPLORER":
+          this.skills["STEALTH"] = 3;
+          break;
+        default:
+      }
+      this.skills["ATHLETICS"] += this.modifiers[Attribute.STRENGTH];
+      this.skills["VANDALISM"] += this.modifiers[Attribute.STRENGTH];
+      this.skills["DRIVING"] += this.modifiers[Attribute.DEXTERITY];
+      this.skills["STEALTH"] += this.modifiers[Attribute.DEXTERITY];
+      this.skills["MEDICINE"] += this.modifiers[Attribute.INTELLIGENCE];
+      this.skills["TECHNOLOGY"] += this.modifiers[Attribute.INTELLIGENCE];
+      this.skills["TRANSLATION"] += this.modifiers[Attribute.INTELLIGENCE];
+      this.skills["FORENSICS"] += this.modifiers[Attribute.WISDOM];
+      this.skills["PERCEPTION"] += this.modifiers[Attribute.WISDOM];
+      this.skills["CHARM"] += this.modifiers[Attribute.CHARISMA];
+      this.skills["CONTACTS"] += this.modifiers[Attribute.CHARISMA];
+
+      for (let key in this.skills) {
+        this.skills[key] = this.skills[key] < 0 ? 0 : this.skills[key];
+      }
+
+      for (let key in this.skills) {
+        this.skills[key] = this.skills[key] > 6 ? 6 : this.skills[key];
+      }
+    },
+
+    /*-------------------------------------------------------------------
+        Methods used to calculate the Armour Class value of the generated character
+    ---------------------------------------------------------------------*/
+    assignArmourClass: function () {
+      this.armourClass = 10 + this.modifiers[Attribute.DEXTERITY];
     },
   },
 };

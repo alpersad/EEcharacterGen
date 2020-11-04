@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p>{{ flesh }}</p>
-    <p>{{ grit }}</p>
+    <p>Flesh: {{ flesh }}</p>
+    <p>Grit: {{ grit }}</p>
   </div>
 </template>
 
