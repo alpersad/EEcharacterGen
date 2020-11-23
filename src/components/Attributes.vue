@@ -1,11 +1,21 @@
 <template>
   <div>
-    <p v-for="(value, key) in attributeList" :key="key">
-      {{ key }}: {{ attributes[value] }}
-    </p>
-    <p v-for="(value, key) in attributeList" :key="key">
-      {{ key }} Modifiers: {{ modifiers[value] }}
-    </p>
+    <div
+      class="seperate"
+      v-for="(attrIndex, attrKey) in attributeList"
+      :key="attrKey"
+    >
+      <p>
+        <button v-on:click="$emit('decreaseattr', attrIndex)">-</button>
+        {{ attrKey }}
+        <button v-on:click="$emit('increaseattr', attrIndex)">+</button>
+      </p>
+      <span class="roboto">
+        {{ attributes.value[attrIndex] }}
+        |
+        {{ attributes.modifiers[attrIndex] }}
+      </span>
+    </div>
     <button v-on:click="$emit('doppelganger')">Doppelganger</button>
   </div>
 </template>
@@ -22,7 +32,7 @@ export const Attribute = {
 
 export default {
   name: "Attributes",
-  props: ["attributes", "modifiers"],
+  props: ["attributes"],
   data: function () {
     return {
       attributeList: Attribute,
@@ -33,4 +43,7 @@ export default {
 </script>
 
 <style scoped>
+.seperate {
+  border-style: solid;
+}
 </style>

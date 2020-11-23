@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Pistol",
+        "damage": 8,
+        "range": "short",
+        "hands": 1,
+        "special": "Uses Ammunition.",
+        "light": true,
+        "rare": false
+    },
+    {
+        "name": "Rifle",
+        "damage": 10,
+        "range": "medium",
+        "hands": 2,
+        "special": "Uses Ammunition.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Marksman’s Rifle",
+        "damage": 12,
+        "range": "long",
+        "hands": 2,
+        "special": "-4 to hit when not used with the Aim action. Uses Ammunition.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Automatic Rifle",
+        "damage": 10,
+        "range": "medium",
+        "hands": 2,
+        "special": "Can be used for covering fire.Runs out of ammunition on a 1 or 2. Uses Ammunition.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Shotgun",
+        "damage": 12,
+        "range": "short",
+        "hands": 2,
+        "special": "Uses Ammunition.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Flamethrower",
+        "damage": 10,
+        "range": "short",
+        "hands": 2,
+        "special": "Those hit must take a Save vs Hazards or be set alight. Can be used to make area attacks. Runs out of ammunition on a 1 or 2. Uses Special Ammunition.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Taser",
+        "damage": 6,
+        "range": "short",
+        "hands": 1,
+        "special": "Those hit must make a Save vs Stunning or lose their next combat action.  Uses Special Ammunition.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Throwing Knife",
+        "damage": 6,
+        "range": "thrown",
+        "hands": 1,
+        "special": "Silent, can be recovered and thrown again.",
+        "light": true,
+        "rare": false
+    },
+    {
+        "name": "Grenade",
+        "damage": 12,
+        "range": "thrown",
+        "hands": 1,
+        "special": "Can only be used to make area attacks. Single use",
+        "light": false,
+        "rare": false
+    }
+]

@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Blessed Weapon",
+        "rules": "Makes a weapon holy, doing double damage to undead or other unholy things. Doesn’t encumber.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Ceremonial Robes",
+        "rules": "+3 to  Save vs Magic when conducting Experimental Magic",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Cold Iron Weapon",
+        "rules": "Makes a weapon cold iron, doing damage to the Fae. Doesn’t encumber.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Holy Symbol",
+        "rules": "A crucifix or similar. Required for a Mystic to cast spells.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Holy Water",
+        "rules": "Does d6 damage on contact to undead or other unholy things.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Kirlian Camera",
+        "rules": "Shows a faint aura around magical people, things and places photographed. Takes a day or so for images to be developed.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Ritual Mask",
+        "rules": "3 to Save vs Magic when casting a spell not safely memorized.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Silver Plating",
+        "rules": "Makes a weapon silver. Deals double damage to certain enemies. Doesn’t encumber.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Tarot Deck",
+        "rules": "Can be used as a focus for divination spells.",
+        "light": false,
+        "rare": false
+    }
+]

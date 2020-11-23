@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Protective Leathers",
+        "armour": 12,
+        "special": "-",
+        "light": true,
+        "rare": false
+    },
+    {
+        "name": "Bullet-proof Vest",
+        "armour": 14,
+        "special": "-",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Riot Armour",
+        "armour": 16,
+        "special": "Increases encumbrance by an entire level.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Helmet",
+        "armour": 0,
+        "special": "Protects the head from dangers.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Heavy Boots",
+        "armour": 0,
+        "special": "Protect the feet from dangers.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Heavy Gloves",
+        "armour": 0,
+        "special": "Protect the hands from dangers.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Gas Mask",
+        "armour": 0,
+        "special": "Prevents breathing in dangerous gasses.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Shield",
+        "armour": 0,
+        "special": "Needs to be held in one hand. +1 to AC.",
+        "light": false,
+        "rare": false
+    }
+]

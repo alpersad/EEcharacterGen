@@ -1,0 +1,224 @@
+[
+    {
+        "name": "Aradia, or the Gospel of the Witches",
+        "author": "Charles Godfrey Leland",
+        "spells": [
+            "Light",
+            "Mending",
+            "Unseen Servant",
+            "Spider Climb"
+        ]
+    },
+    {
+        "name": "Arcadian Songs",
+        "author": "Various",
+        "spells": [
+            "Howl of the Moon",
+            "Speak With Animals",
+            "Spectral Step"
+        ]
+    },
+    {
+        "name": "Book Of Going Forth By Day",
+        "author": "Unknown",
+        "spells": [
+            "Eyes of the Dead",
+            "Speak with Corpses "
+        ]
+    },
+    {
+        "name": "Book of Saint Cyprian",
+        "author": "Cyprian of Antioch",
+        "spells": [
+            "Command",
+            "Suggestion",
+            "Silence"
+        ]
+    },
+    {
+        "name": "Codex Seraphinianus",
+        "author": "Luigi Serafini",
+        "spells": [
+            "Polymorph Self",
+            "Turn Flesh to Stone"
+        ]
+    },
+    {
+        "name": "Cultes Des Ghoules",
+        "author": "Comte d’Erlette",
+        "spells": [
+            "Turn Away Undead",
+            "Animate Dead"
+        ]
+    },
+    {
+        "name": "De Vermis Mysteriis",
+        "author": "Ludwig Prinn",
+        "spells": [
+            "Hurl Through Time",
+            "Senescence",
+            "Haste"
+        ]
+    },
+    {
+        "name": "Galdrabók",
+        "author": "Natan Lindqvis ",
+        "spells": [
+            "Cure Wounds",
+            "Neutralise Poison",
+            "Cure Disease"
+        ]
+    },
+    {
+        "name": "Grimorium Verum",
+        "author": "Alibeck",
+        "spells": [
+            "Augury",
+            "Locate Object",
+            "Divination"
+        ]
+    },
+    {
+        "name": "Malleus Maleficarum",
+        "author": "Anon",
+        "spells": [
+            "Dispel Magic",
+            "Ward Against the Eldritch"
+        ]
+    },
+    {
+        "name": "Mystery of the Cathederals",
+        "author": "Fulcanelli",
+        "spells": [
+            "Shape Stone",
+            "Turn Rock to Mud"
+        ]
+    },
+    {
+        "name": "On Flesh",
+        "author": "Prof. Junji Sato",
+        "spells": [
+            "Clone",
+            "Shield"
+        ]
+    },
+    {
+        "name": "On the Vapours of Leng",
+        "author": "Armitage",
+        "spells": [
+            "Mist Form",
+            "Cloudkill"
+        ]
+    },
+    {
+        "name": "Rauðskinna",
+        "author": "Gottskálk grimmi Nikulásson ",
+        "spells": [
+            "Disintegrate",
+            "Shrink"
+        ]
+    },
+    {
+        "name": "Shams al-Ma'arif",
+        "author": "Ahmed Al-Boni",
+        "spells": [
+            "Resist Fire",
+            "Heroism",
+            "Sacrifice"
+        ]
+    },
+    {
+        "name": "Sirenen liburua",
+        "author": "S. Sabadell",
+        "spells": [
+            "Water Breathing",
+            "Sleep",
+            "Message"
+        ]
+    },
+    {
+        "name": "The Black Arts for Dummies",
+        "author": "‘For Dummies’ series",
+        "spells": [
+            "Bleeding Curse",
+            "Darkness",
+            "Enlarge",
+            "Web"
+        ]
+    },
+    {
+        "name": "The Black Gate",
+        "author": "Pascarelle",
+        "spells": [
+            "Seven Gates",
+            "X-ray Vision"
+        ]
+    },
+    {
+        "name": "The Crucible of Enlightenment",
+        "author": "Erja Turinen",
+        "spells": [
+            "Create Fire",
+            "Fireball",
+            "Wall of Fire"
+        ]
+    },
+    {
+        "name": "The Thief’s Arts",
+        "author": "Mika Uehara",
+        "spells": [
+            "Invisibility",
+            "Rip Portal"
+        ]
+    },
+    {
+        "name": "Things Unspoken",
+        "author": "Anon",
+        "spells": [
+            "Divination",
+            "Paradoxical Revelation"
+        ]
+    },
+    {
+        "name": "Unaussprechlichen Kulten ",
+        "author": "Freidrich von Juntz",
+        "spells": [
+            "Antimagic Shell",
+            "Remove Curse"
+        ]
+    },
+    {
+        "name": "Voormish Translations",
+        "author": "A. E. Smith",
+        "spells": [
+            "Bookspeak",
+            "Comprehend Languages",
+            "True Sight"
+        ]
+    },
+    {
+        "name": "Voynich Manuscrip",
+        "author": "Roger Bacon",
+        "spells": [
+            "Floating Eye",
+            "Polymorph Others"
+        ]
+    },
+    {
+        "name": "Weaknesses of the Eye",
+        "author": "Ingir Viitala",
+        "spells": [
+            "False Sound",
+            "Create Illusion",
+            "Mirror Image "
+        ]
+    },
+    {
+        "name": "Work With Others",
+        "author": "Francesca Madaraki",
+        "spells": [
+            "Sculpt Flesh",
+            "Cure Wounds"
+        ]
+    }
+]

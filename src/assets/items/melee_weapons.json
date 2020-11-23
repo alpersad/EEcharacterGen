@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Knife",
+        "damage": 6,
+        "hands": 1,
+        "special": "Can be used while grappling",
+        "light": true,
+        "rare": false
+    },
+    {
+        "name": "Stun Baton",
+        "damage": 6,
+        "hands": 1,
+        "special": "Victims must make a Save vs Stunning or lose their next combat action. Requires special ammunition.",
+        "light": false,
+        "rare": true
+    },
+    {
+        "name": "Garotte",
+        "damage": 6,
+        "hands": 2,
+        "special": "Can only be used from surprise or when grappling. Does damage directly to flesh.",
+        "light": true,
+        "rare": false
+    },
+    {
+        "name": "Light Weapon",
+        "damage": 8,
+        "hands": 1,
+        "special": "Represents various weapons, such as blackjacks and  hatchets.",
+        "light": true,
+        "rare": false
+    },
+    {
+        "name": "One-Handed Weapons",
+        "damage": 10,
+        "hands": 1,
+        "special": "Represents various weapons, such as swords, machetes, baseball bats with nails in etc.",
+        "light": false,
+        "rare": false
+    },
+    {
+        "name": "Two-Handed Weapons",
+        "damage": 12,
+        "hands": 2,
+        "special": "Represents various weapons, such as claymores, chains, felling axes etc",
+        "light": false,
+        "rare": false
+    }
+]
