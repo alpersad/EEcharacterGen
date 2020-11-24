@@ -1,5 +1,6 @@
 <template>
   <div>
+    <b>ATTRIBUTES</b>
     <div
       class="seperate"
       v-for="(attrIndex, attrKey) in attributeList"

@@ -18,7 +18,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 #app {
-  font-family: "Condiment";
+  font-family: "Condiment", "Oswald", Arial, Helvetica, sans-serif;
   font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

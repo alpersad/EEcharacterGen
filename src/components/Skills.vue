@@ -1,13 +1,13 @@
 <template>
   <div>
     <b>SKILLS</b>
-    <p v-for="(value, key) in skills" :key="key">
-      {{ key }}: {{ value }} in 6
-      <button v-if="criminal" v-on:click="$emit('reduceskill', key)">-</button>
-      <button v-if="criminal" v-on:click="$emit('increaseskill', key)">
-        +
-      </button>
-    </p>
+    <div class="border" v-for="(value, key) in skills" :key="key">
+      <p>
+        <button v-on:click="$emit('reduceskill', key)">-</button>{{ key
+        }}<button v-on:click="$emit('increaseskill', key)">+</button>
+      </p>
+      <span class="roboto">{{ value }} in 6 </span>
+    </div>
   </div>
 </template>
 
@@ -31,4 +31,7 @@ export default {
 </script>
 
 <style scoped>
+.border {
+  border-style: solid;
+}
 </style>

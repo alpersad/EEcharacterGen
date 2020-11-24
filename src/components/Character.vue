@@ -108,7 +108,6 @@ export default {
         CHARM: 1,
         CONTACTS: 1,
       },
-      skillPoint: 6,
       equipmentMax: { base: 5, light: 0, rare: 2 },
       equipmentList: [],
       experience: 0,
@@ -377,16 +376,14 @@ export default {
     },
 
     increaseSkill: function (type) {
-      if (this.skills[type] < 6 && this.skillPoint > 0) {
+      if (this.skills[type] < 6) {
         this.skills[type] += 1;
-        this.skillPoint -= 1;
       }
     },
 
     reduceSkill: function (type) {
-      if (this.skills[type] > 0 && this.skillPoint < 6) {
+      if (this.skills[type] > 0) {
         this.skills[type] -= 1;
-        this.skillPoint += 1;
       }
     },
 
