@@ -3,17 +3,19 @@
     <div class="columns">
       <div class="column">
         <input v-model="name" placeholder="Enter Character Name" />
-        <label for="eeclass"> Select class </label>
-        <select v-model="selectedClass">
-          <option
-            v-for="characterClass in classList"
-            :key="characterClass"
-            v-bind:value="characterClass"
-          >
-            {{ characterClass }}
-          </option>
-        </select>
-        <p>Class: {{ selectedClass }}</p>
+        <p>
+          CLASS:
+          <select v-model="selectedClass">
+            <label for="eeclass"></label>
+            <option
+              v-for="characterClass in classList"
+              :key="characterClass"
+              v-bind:value="characterClass"
+            >
+              {{ characterClass }}
+            </option>
+          </select>
+        </p>
         <button v-on:click="generateCharacter">Generate Character</button>
       </div>
       <div class="column">
@@ -30,6 +32,8 @@
           v-bind:grit="grit"
           v-bind:armourClass="armourClass"
           v-bind:resourceLevel="resourceLevel"
+          v-on:increaseresource="increaseResource"
+          v-on:decreaseresource="decreaseResource"
         />
       </div>
       <div class="column">
@@ -393,6 +397,24 @@ export default {
     assignArmourClass: function () {
       this.armourClass = 10 + this.attributes.modifiers[Attribute.DEXTERITY];
     },
+
+    /*-----------------------------------------------------------------------------
+        Methods used to update the Resource Level value of the generated character
+    -------------------------------------------------------------------------------*/
+    increaseResource: function () {
+      this.resourceLevel += 1;
+      if (this.resourceLevel > 9) {
+        this.resourceLevel = 9;
+      }
+    },
+
+    decreaseResource: function () {
+      this.resourceLevel -= 1;
+      if (this.resourceLevel < 1) {
+        this.resourceLevel = 1;
+      }
+    },
+
     /*------------------------------------------------------------------------------------
         Methods used to calculate the maximum equipment allowed of the generated character
     --------------------------------------------------------------------------------------*/

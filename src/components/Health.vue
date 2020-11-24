@@ -14,7 +14,11 @@
       <span class="roboto"> {{ armourClass }}</span>
     </div>
     <div class="border">
-      <p>RESOURCE LEVEL</p>
+      <p>
+        <button v-on:click="$emit('decreaseresource')">-</button>
+        RESOURCE LEVEL
+        <button v-on:click="$emit('increaseresource')">+</button>
+      </p>
       <span class="roboto"> {{ resourceLevel }}</span>
     </div>
   </div>
