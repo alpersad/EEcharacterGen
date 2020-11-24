@@ -1,10 +1,22 @@
 <template>
   <div>
     <b>HEALTH</b>
-    <p>Flesh: {{ flesh }}</p>
-    <p>Grit: {{ grit }}</p>
-    <p>Armour Class: {{ armourClass }}</p>
-    <p>Resource Level: {{ resourceLevel }}</p>
+    <div class="border">
+      <p>FLESH</p>
+      <span class="roboto"> {{ flesh }}</span>
+    </div>
+    <div class="border">
+      <p>GRIT</p>
+      <span class="roboto"> {{ grit }}</span>
+    </div>
+    <div class="border">
+      <p>ARMOUR CLASS</p>
+      <span class="roboto"> {{ armourClass }}</span>
+    </div>
+    <div class="border">
+      <p>RESOURCE LEVEL</p>
+      <span class="roboto"> {{ resourceLevel }}</span>
+    </div>
   </div>
 </template>
 
@@ -19,4 +31,7 @@ export default {
 </script>
 
 <style scoped>
+.border {
+  border-style: solid;
+}
 </style>
