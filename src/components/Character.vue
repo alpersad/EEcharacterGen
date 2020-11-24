@@ -33,7 +33,11 @@
         />
       </div>
       <div class="column">
-        <Saves v-bind:saves="saves" />
+        <Saves
+          v-bind:saves="saves"
+          v-on:increasesave="increaseSave"
+          v-on:decreasesave="decreaseSave"
+        />
       </div>
       <div class="column">
         <Skills
@@ -310,6 +314,17 @@ export default {
       this.saves[SavingThrows.MAGIC] -= this.attributes.modifiers[
         Attribute.WISDOM
       ];
+    },
+
+    increaseSave: function (type) {
+      this.saves[SavingThrows[type]] += 1;
+    },
+
+    decreaseSave: function (type) {
+      this.saves[SavingThrows[type]] -= 1;
+      if (this.saves[SavingThrows[type]] < 0) {
+        this.saves[SavingThrows[type]] = 0;
+      }
     },
 
     /*-----------------------------------------------------------------------

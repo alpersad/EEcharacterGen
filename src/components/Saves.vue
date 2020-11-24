@@ -1,9 +1,15 @@
 <template>
   <div>
-    <b>SAVES VS</b>
-    <p v-for="(value, key) in SavesVS" :key="key">
-      {{ key }}: {{ saves[value] }}
-    </p>
+    <b>SAVES</b>
+    <div class="border" v-for="(value, key) in SavesVS" :key="key">
+      <p>
+        <button v-on:click="$emit('decreasesave', key)">-</button>
+        {{ key }}
+        <button v-on:click="$emit('increasesave', key)">+</button>
+      </p>
+
+      <span class="roboto">{{ saves[value] }}</span>
+    </div>
   </div>
 </template>
 
@@ -39,4 +45,7 @@ export default {
 </script>
 
 <style scoped>
+.border {
+  border-style: solid;
+}
 </style>
