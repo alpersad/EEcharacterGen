@@ -52,6 +52,12 @@
         />
       </div>
     </div>
+    <div>
+      <Equipment
+        v-bind:equipmentMax="equipmentMax"
+        v-bind:class="selectedClass"
+      />
+    </div>
   </div>
 </template>
 
@@ -74,6 +80,7 @@ import Attributes from "./Attributes.vue";
 import Health from "./Health.vue";
 import Saves from "./Saves.vue";
 import Skills from "./Skills.vue";
+import Equipment from "./Equipment.vue";
 
 // External Objects
 import { EEClass } from "./Class.vue";
@@ -88,6 +95,7 @@ export default {
     Health,
     Saves,
     Skills,
+    Equipment,
   },
   data: function () {
     return {
@@ -112,8 +120,10 @@ export default {
         CHARM: 1,
         CONTACTS: 1,
       },
-      equipmentMax: { base: 5, light: 0, rare: 2 },
+      equipmentBase: { common: 5, rare: 2 },
+      equipmentMax: { common: 0, rare: 0 },
       equipmentList: [],
+      encumberance: 0,
       experience: 0,
       saves: [0, 0, 0, 0, 0],
       armourClass: 10,
@@ -136,6 +146,7 @@ export default {
       this.assignSaves();
       this.assignSkills();
       this.assignArmourClass();
+      this.assignEquipmentMax();
     },
 
     /*---------------------------------------------------------------------------
@@ -418,7 +429,16 @@ export default {
     /*------------------------------------------------------------------------------------
         Methods used to calculate the maximum equipment allowed of the generated character
     --------------------------------------------------------------------------------------*/
-    assignEquipmentMax: function () {},
+    assignEquipmentMax: function () {
+      this.equipmentMax.common =
+        this.equipmentBase.common +
+        this.attributes.modifiers[Attribute.INTELLIGENCE];
+
+      // Calculate encumbrance of generated character
+      this.encumberance =
+        this.equipmentBase.common +
+        this.attributes.modifiers[Attribute.STRENGTH];
+    },
   },
 };
 </script>
