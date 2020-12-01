@@ -1,187 +1,187 @@
 [
     {
         "name": "Acid",
-        "rules": "Does d6 damage on contact.",
+        "description": "Does d6 damage on contact.",
         "light": false,
         "rare": false
     },
     {
         "name": "Antivenoms",
-        "rules": "Allows a re-roll of a failed Save vs Poison if applied immediately. Only works vs mundane poisons.",
+        "description": "Allows a re-roll of a failed Save vs Poison if applied immediately. Only works vs mundane poisons.",
         "light": false,
         "rare": true
     },
     {
         "name": "Binoculars",
-        "rules": "For looking at stuff.",
+        "description": "For looking at stuff.",
         "light": false,
         "rare": false
     },
     {
         "name": "Caltrops",
-        "rules": "Cover a 10 foot area. Save vs Hazards or suffer d4 damage when walking through.",
+        "description": "Cover a 10 foot area. Save vs Hazards or suffer d4 damage when walking through.",
         "light": false,
         "rare": false
     },
     {
         "name": "Camera",
-        "rules": "For taking pictures of stuff.",
+        "description": "For taking pictures of stuff.",
         "light": false,
         "rare": false
     },
     {
         "name": "Climbing Gear",
-        "rules": "Includes 50 feet of rope, 10 pitons, a grappling hook, carabiners and other accoutrements.",
+        "description": "Includes 50 feet of rope, 10 pitons, a grappling hook, carabiners and other accoutrements.",
         "light": false,
         "rare": false
     },
     {
         "name": "Crowbar",
-        "rules": "+1 vandalism to pry stuff open.",
+        "description": "+1 vandalism to pry stuff open.",
         "light": false,
         "rare": false
     },
     {
         "name": "Explosives",
-        "rules": "For each unit used, +1 vandalism to blow stuff up. D10 damage to everybody in the blast (Save vs Hazards negates). One use only.",
+        "description": "For each unit used, +1 vandalism to blow stuff up. D10 damage to everybody in the blast (Save vs Hazards negates). One use only.",
         "light": false,
         "rare": false
     },
     {
         "name": "Fire Extinguisher",
-        "rules": "Puts out fires.",
+        "description": "Puts out fires.",
         "light": false,
         "rare": false
     },
     {
         "name": "First-Aid Kit",
-        "rules": "Contains bandages, splints and so on to provide emergency medical treatment in the field.",
+        "description": "Contains bandages, splints and so on to provide emergency medical treatment in the field.",
         "light": false,
         "rare": false
     },
     {
         "name": "Flashlight",
-        "rules": "lluminates an area.",
+        "description": "lluminates an area.",
         "light": true,
         "rare": false
     },
     {
         "name": "Geiger Counter",
-        "rules": "Allows radiation levels to be detected.",
+        "description": "Allows radiation levels to be detected.",
         "light": false,
         "rare": false
     },
     {
         "name": "Glue",
-        "rules": "Sticky stuff.",
+        "description": "Sticky stuff.",
         "light": true,
         "rare": false
     },
     {
         "name": "Handcuffs",
-        "rules": "For restraining people.",
+        "description": "For restraining people.",
         "light": true,
         "rare": false
     },
     {
         "name": "Laptop Computer",
-        "rules": "Does everything a computer does. Required in order to interact with computer code in the field.",
+        "description": "Does everything a computer does. Required in order to interact with computer code in the field.",
         "light": false,
         "rare": true
     },
     {
         "name": "Lighter",
-        "rules": "Allows fires to be lit.",
+        "description": "Allows fires to be lit.",
         "light": true,
         "rare": false
     },
     {
         "name": "Lockpicks",
-        "rules": "Required in order to pick normal locks.",
+        "description": "Required in order to pick normal locks.",
         "light": true,
         "rare": false
     },
     {
         "name": "Makeup Kit",
-        "rules": "+1 to rolls to disguise yourself.",
+        "description": "+1 to rolls to disguise yourself.",
         "light": false,
         "rare": false
     },
     {
         "name": "Metal Detector",
-        "rules": "Goes beepwhen pointed at metal.",
+        "description": "Goes beepwhen pointed at metal.",
         "light": false,
         "rare": false
     },
     {
         "name": "Mirror",
-        "rules": "Reflects things.",
+        "description": "Reflects things.",
         "light": true,
         "rare": false
     },
     {
         "name": "Night-vision Goggles",
-        "rules": "Lets you see in the dark. Bright light becomes painful.",
+        "description": "Lets you see in the dark. Bright light becomes painful.",
         "light": false,
         "rare": true
     },
     {
         "name": "Reload",
-        "rules": "Allows a weapon to be used after running out of ammunition. 1 use per reload taken.",
+        "description": "Allows a weapon to be used after running out of ammunition. 1 use per reload taken.",
         "light": false,
         "rare": false
     },
     {
         "name": "Scuba Gear",
-        "rules": "Lets you breath underwater for an hour.",
+        "description": "Lets you breath underwater for an hour.",
         "light": false,
         "rare": true
     },
     {
         "name": "Shovel",
-        "rules": "Useful for digging.",
+        "description": "Useful for digging.",
         "light": false,
         "rare": false
     },
     {
         "name": "Smartphone",
-        "rules": "Does everything a smartphone does.",
+        "description": "Does everything a smartphone does.",
         "light": true,
         "rare": true
     },
     {
         "name": "Smoke Bombs",
-        "rules": "Fill a fifteen foot area with smoke, blocking line of sight. You get 5.",
+        "description": "Fill a fifteen foot area with smoke, blocking line of sight. You get 5.",
         "light": false,
         "rare": false
     },
     {
         "name": "Special Reload",
-        "rules": "Allows a specialist weapon to be used after running out of ammunition. Applies only to one weapon, specify which for each special reload. One use per reload taken.",
+        "description": "Allows a specialist weapon to be used after running out of ammunition. Applies only to one weapon, specify which for each special reload. One use per reload taken.",
         "light": false,
         "rare": false
     },
     {
         "name": "Sub-vocal Microphone",
-        "rules": "Lets you communicate with everybody else in the party with a sub-vocal microphone al-most silently and at range.",
+        "description": "Lets you communicate with everybody else in the party with a sub-vocal microphone al-most silently and at range.",
         "light": true,
         "rare": true
     },
     {
         "name": "Surgeon’s Tools",
-        "rules": "A complete set of medical tools, suitable for performing delicate surgery.",
+        "description": "A complete set of medical tools, suitable for performing delicate surgery.",
         "light": false,
         "rare": true
     },
     {
         "name": "Toolbox",
-        "rules": "Full of small saws, pliers, drills, hammers, nails, screwdrivers and so on.",
+        "description": "Full of small saws, pliers, drills, hammers, nails, screwdrivers and so on.",
         "light": false,
         "rare": false
     },
     {
         "name": "Wooden Stakes",
-        "rules": "Use them to jam open doors or kill vampires. You get 10.",
+        "description": "Use them to jam open doors or kill vampires. You get 10.",
         "light": false,
         "rare": false
     }

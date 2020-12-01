@@ -1,46 +1,46 @@
 [
     {
         "name": "Bilingual",
-        "rules": "The character begins play knowing one extra language, beyond the default language of the game’s setting."
+        "description": "The character begins play knowing one extra language, beyond the default language of the game’s setting."
     },
     {
         "name": "Day Job",
-        "rules": "The character has a proper job. Adjust their Resource Level by their Wisdom modifier."
+        "description": "The character has a proper job. Adjust their Resource Level by their Wisdom modifier."
     },
     {
         "name": "Dealer",
-        "rules": "The character trades on the black market, relying on their people skills to turn a profit. Adjust the character’s Resource Level by their Charisma modifier."
+        "description": "The character trades on the black market, relying on their people skills to turn a profit. Adjust the character’s Resource Level by their Charisma modifier."
     },
     {
         "name": "Fame",
-        "rules": "The character is well known, at least locally. This might give them +1 to Charm rolls when dealing with fans, but makes it hard to keep their cover if they’re recognised."
+        "description": "The character is well known, at least locally. This might give them +1 to Charm rolls when dealing with fans, but makes it hard to keep their cover if they’re recognised."
     },
     {
         "name": "Financial Investments",
-        "rules": "The character plays the financial markets, or gambles. Adjust the character’s Resources Level by their Intelligence modifier."
+        "description": "The character plays the financial markets, or gambles. Adjust the character’s Resources Level by their Intelligence modifier."
     },
     {
         "name": "Firearms Licence",
-        "rules": "The character won’t get in legal trouble for carrying weapons, until they actually shoot somebody."
+        "description": "The character won’t get in legal trouble for carrying weapons, until they actually shoot somebody."
     },
     {
         "name": "Independently Wealthy",
-        "rules": "The character has a modest sum of money to be getting by on, perhaps an inheritance. The character’s Resources Level is increased by 1."
+        "description": "The character has a modest sum of money to be getting by on, perhaps an inheritance. The character’s Resources Level is increased by 1."
     },
     {
         "name": "Laboratory Access",
-        "rules": "The character has access to a well-stocked laboratory, perhaps private or perhaps at a university or hospital, in which they can conduct experiments largely freely."
+        "description": "The character has access to a well-stocked laboratory, perhaps private or perhaps at a university or hospital, in which they can conduct experiments largely freely."
     },
     {
         "name": "Off the Grid",
-        "rules": "The character has no paper-trail leading to them. They can’t be located through doxing or similar investigations."
+        "description": "The character has no paper-trail leading to them. They can’t be located through doxing or similar investigations."
     },
     {
         "name": "Recognised Academic",
-        "rules": "The character won’t get in trouble for carrying occult items, until they start performing magic themselves."
+        "description": "The character won’t get in trouble for carrying occult items, until they start performing magic themselves."
     },
     {
         "name": "Safehouse",
-        "rules": "The character has a secure above-ground location only known to themselves and the other party members."
+        "description": "The character has a secure above-ground location only known to themselves and the other party members."
     }
 ]

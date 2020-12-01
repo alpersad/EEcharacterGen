@@ -1,17 +1,17 @@
 [
     {
         "name": "Motorbike",
-        "rules": "Seats 2. Can fit in places other vehicles can’t. +1 to driving rolls to avoid obstacles.",
+        "description": "Seats 2. Can fit in places other vehicles can’t. +1 to driving rolls to avoid obstacles.",
         "structure_points": "10 (2d8)"
     },
     {
         "name": "Car",
-        "rules": "Seats 6.",
+        "description": "Seats 6.",
         "structure_points": "15 (3d8)"
     },
     {
         "name": "Van",
-        "rules": "Seats 10. Can’t fit in a lot of places.",
+        "description": "Seats 10. Can’t fit in a lot of places.",
         "structure_points": "20 (4d8)"
     }
 ]

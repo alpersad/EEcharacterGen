@@ -55,7 +55,7 @@
     <div>
       <Equipment
         v-bind:equipmentMax="equipmentMax"
-        v-bind:class="selectedClass"
+        v-bind:selectedClass="selectedClass"
       />
     </div>
   </div>
@@ -201,6 +201,7 @@ export default {
       this.assignSaves();
       this.assignSkills();
       this.assignArmourClass();
+      this.assignEquipmentMax();
     },
 
     doppelganger: function () {

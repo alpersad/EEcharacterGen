@@ -2,7 +2,7 @@
     {
         "name": "Aradia, or the Gospel of the Witches",
         "author": "Charles Godfrey Leland",
-        "spells": [
+        "description": [
             "Light",
             "Mending",
             "Unseen Servant",
@@ -12,7 +12,7 @@
     {
         "name": "Arcadian Songs",
         "author": "Various",
-        "spells": [
+        "description": [
             "Howl of the Moon",
             "Speak With Animals",
             "Spectral Step"
@@ -21,7 +21,7 @@
     {
         "name": "Book Of Going Forth By Day",
         "author": "Unknown",
-        "spells": [
+        "description": [
             "Eyes of the Dead",
             "Speak with Corpses "
         ]
@@ -29,7 +29,7 @@
     {
         "name": "Book of Saint Cyprian",
         "author": "Cyprian of Antioch",
-        "spells": [
+        "description": [
             "Command",
             "Suggestion",
             "Silence"
@@ -38,7 +38,7 @@
     {
         "name": "Codex Seraphinianus",
         "author": "Luigi Serafini",
-        "spells": [
+        "description": [
             "Polymorph Self",
             "Turn Flesh to Stone"
         ]
@@ -46,7 +46,7 @@
     {
         "name": "Cultes Des Ghoules",
         "author": "Comte d’Erlette",
-        "spells": [
+        "description": [
             "Turn Away Undead",
             "Animate Dead"
         ]
@@ -54,7 +54,7 @@
     {
         "name": "De Vermis Mysteriis",
         "author": "Ludwig Prinn",
-        "spells": [
+        "description": [
             "Hurl Through Time",
             "Senescence",
             "Haste"
@@ -63,7 +63,7 @@
     {
         "name": "Galdrabók",
         "author": "Natan Lindqvis ",
-        "spells": [
+        "description": [
             "Cure Wounds",
             "Neutralise Poison",
             "Cure Disease"
@@ -72,7 +72,7 @@
     {
         "name": "Grimorium Verum",
         "author": "Alibeck",
-        "spells": [
+        "description": [
             "Augury",
             "Locate Object",
             "Divination"
@@ -81,7 +81,7 @@
     {
         "name": "Malleus Maleficarum",
         "author": "Anon",
-        "spells": [
+        "description": [
             "Dispel Magic",
             "Ward Against the Eldritch"
         ]
@@ -89,7 +89,7 @@
     {
         "name": "Mystery of the Cathederals",
         "author": "Fulcanelli",
-        "spells": [
+        "description": [
             "Shape Stone",
             "Turn Rock to Mud"
         ]
@@ -97,7 +97,7 @@
     {
         "name": "On Flesh",
         "author": "Prof. Junji Sato",
-        "spells": [
+        "description": [
             "Clone",
             "Shield"
         ]
@@ -105,7 +105,7 @@
     {
         "name": "On the Vapours of Leng",
         "author": "Armitage",
-        "spells": [
+        "description": [
             "Mist Form",
             "Cloudkill"
         ]
@@ -113,7 +113,7 @@
     {
         "name": "Rauðskinna",
         "author": "Gottskálk grimmi Nikulásson ",
-        "spells": [
+        "description": [
             "Disintegrate",
             "Shrink"
         ]
@@ -121,7 +121,7 @@
     {
         "name": "Shams al-Ma'arif",
         "author": "Ahmed Al-Boni",
-        "spells": [
+        "description": [
             "Resist Fire",
             "Heroism",
             "Sacrifice"
@@ -130,7 +130,7 @@
     {
         "name": "Sirenen liburua",
         "author": "S. Sabadell",
-        "spells": [
+        "description": [
             "Water Breathing",
             "Sleep",
             "Message"
@@ -139,7 +139,7 @@
     {
         "name": "The Black Arts for Dummies",
         "author": "‘For Dummies’ series",
-        "spells": [
+        "description": [
             "Bleeding Curse",
             "Darkness",
             "Enlarge",
@@ -149,7 +149,7 @@
     {
         "name": "The Black Gate",
         "author": "Pascarelle",
-        "spells": [
+        "description": [
             "Seven Gates",
             "X-ray Vision"
         ]
@@ -157,7 +157,7 @@
     {
         "name": "The Crucible of Enlightenment",
         "author": "Erja Turinen",
-        "spells": [
+        "description": [
             "Create Fire",
             "Fireball",
             "Wall of Fire"
@@ -166,7 +166,7 @@
     {
         "name": "The Thief’s Arts",
         "author": "Mika Uehara",
-        "spells": [
+        "description": [
             "Invisibility",
             "Rip Portal"
         ]
@@ -174,7 +174,7 @@
     {
         "name": "Things Unspoken",
         "author": "Anon",
-        "spells": [
+        "description": [
             "Divination",
             "Paradoxical Revelation"
         ]
@@ -182,7 +182,7 @@
     {
         "name": "Unaussprechlichen Kulten ",
         "author": "Freidrich von Juntz",
-        "spells": [
+        "description": [
             "Antimagic Shell",
             "Remove Curse"
         ]
@@ -190,7 +190,7 @@
     {
         "name": "Voormish Translations",
         "author": "A. E. Smith",
-        "spells": [
+        "description": [
             "Bookspeak",
             "Comprehend Languages",
             "True Sight"
@@ -199,7 +199,7 @@
     {
         "name": "Voynich Manuscript",
         "author": "Roger Bacon",
-        "spells": [
+        "description": [
             "Floating Eye",
             "Polymorph Others"
         ]
@@ -207,7 +207,7 @@
     {
         "name": "Weaknesses of the Eye",
         "author": "Ingir Viitala",
-        "spells": [
+        "description": [
             "False Sound",
             "Create Illusion",
             "Mirror Image "
@@ -216,7 +216,7 @@
     {
         "name": "Work With Others",
         "author": "Francesca Madaraki",
-        "spells": [
+        "description": [
             "Sculpt Flesh",
             "Cure Wounds"
         ]
