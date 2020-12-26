@@ -445,4 +445,15 @@ export default {
 </script>
 
 <style scoped>
+.columns {
+  border: 2px solid #ccc;
+  margin: 20px;
+  padding: 10px;
+  background: #efefef;
+}
+.column {
+  padding: 10px;
+  background: #fff;
+  margin: 10px;
+}
 </style>
