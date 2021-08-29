@@ -41,7 +41,7 @@ class Attribute {
     } else if (this.value <= 8) {
       return -1;
     } else if (this.value <= 12) {
-      return -0;
+      return 0;
     } else if (this.value <= 15) {
       return 1;
     } else if (this.value <= 17) {

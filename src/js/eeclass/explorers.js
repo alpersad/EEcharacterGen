@@ -1,19 +1,19 @@
 /**
  *
- * Bodyguard class
+ * Criminal class
  *
  */
 
-import { Character } from "./character";
-import { Attributes } from "./attributes";
-import { Health } from "./health";
-import { Saves } from "./saves";
-import { Skills } from "./skills";
+import { Character } from "../character";
+import { Attributes } from "../attributes";
+import { Health } from "../health";
+import { Saves } from "../saves";
+import { Skills } from "../skills";
 
-export class Bodyguard extends Character {
+export class Explorer extends Character {
   // Dice for health
-  fleshDie = 10;
-  gritDie = 10;
+  fleshDie = 6;
+  gritDie = 6;
 
   // Base saves values
   baseStun = 10;
@@ -23,14 +23,14 @@ export class Bodyguard extends Character {
   baseMagic = 12;
 
   // Base skills values
-  baseAthletics = 1;
+  baseAthletics = 5;
   baseCharm = 1;
   baseContact = 1;
   baseDriving = 1;
   baseForensics = 1;
   baseMedicine = 1;
   basePerception = 1;
-  baseStealth = 1;
+  baseStealth = 3;
   baseTechnology = 1;
   baseTranslation = 1;
   baseVandalism = 1;
@@ -59,5 +59,13 @@ export class Bodyguard extends Character {
       this.baseTranslation,
       this.baseVandalism
     );
+  }
+
+  /**
+   *
+   * @returns {Number} Dexterity Modifier of the character
+   */
+  get dexterityModifier() {
+    return super.dexterityModifier + 1;
   }
 }
