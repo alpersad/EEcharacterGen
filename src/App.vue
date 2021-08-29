@@ -1,24 +1,22 @@
 <template>
-  <HelloWorld msg="Esoteric Enterprises Character Generation" />
+  <Character />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Character from "./components/Character.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
-  },
+    Character
+  }
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Condiment&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 #app {
-  font-family: "Condiment", "Oswald", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

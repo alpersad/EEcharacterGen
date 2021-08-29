@@ -1,41 +1,29 @@
 <template>
-  <div>
-    <b>HEALTH</b>
-    <div class="border">
-      <p>FLESH</p>
-      <span class="roboto"> {{ flesh }}</span>
-    </div>
-    <div class="border">
-      <p>GRIT</p>
-      <span class="roboto"> {{ grit }}</span>
-    </div>
-    <div class="border">
-      <p>ARMOUR CLASS</p>
-      <span class="roboto"> {{ armourClass }}</span>
-    </div>
-    <div class="border">
-      <p>
-        <button v-on:click="$emit('decreaseresource')">-</button>
-        RESOURCE LEVEL
-        <button v-on:click="$emit('increaseresource')">+</button>
-      </p>
-      <span class="roboto"> {{ resourceLevel }}</span>
-    </div>
+  <div class="flex flex-wrap gap-px">
+    <Flesh :flesh="health.flesh" />
+    <Grit :grit="health.grit" />
   </div>
 </template>
 
 <script>
+import Flesh from "./common/flesh.vue";
+import Grit from "./common/grit.vue";
+
 export default {
-  name: "Health",
-  props: ["flesh", "grit", "armourClass", "resourceLevel"],
-  data() {
-    return {};
+  components: {
+    Flesh,
+    Grit
   },
+  props: {
+    health: {
+      type: Object,
+      default() {
+        return {
+          flesh: 0,
+          grit: 0
+        };
+      }
+    }
+  }
 };
 </script>
-
-<style scoped>
-.border {
-  border-style: solid;
-}
-</style>

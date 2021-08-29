@@ -1,50 +1,55 @@
 <template>
-  <div>
-    <b>ATTRIBUTES</b>
-    <div
-      class="seperate"
-      v-for="(attrIndex, attrKey) in attributeList"
-      :key="attrKey"
-    >
-      <p>
-        <button v-on:click="$emit('decreaseattr', attrIndex)">-</button>
-        {{ attrKey }}
-        <button v-on:click="$emit('increaseattr', attrIndex)">+</button>
-      </p>
-      <span class="roboto">
-        {{ attributes.value[attrIndex] }}
-        |
-        {{ attributes.modifiers[attrIndex] }}
-      </span>
-    </div>
-    <button v-on:click="$emit('doppelganger')">Doppelganger</button>
+  <div class="flex flex-wrap gap-px">
+    <Attribute v-for="attr in attributes" :key="attr.name" :attribute="attr" />
   </div>
 </template>
 
 <script>
-export const Attribute = {
-  STRENGTH: 0,
-  DEXTERITY: 1,
-  CONSTITUTION: 2,
-  INTELLIGENCE: 3,
-  WISDOM: 4,
-  CHARISMA: 5,
-};
-
+import Attribute from "./common/attribute.vue";
 export default {
-  name: "Attributes",
-  props: ["attributes"],
-  data: function () {
-    return {
-      attributeList: Attribute,
-    };
+  components: {
+    Attribute
   },
-  methods: {},
+  props: {
+    attributes: {
+      type: Array,
+      default() {
+        return [
+          {
+            name: "Strength",
+            value: 0,
+            mod: 0
+          },
+          {
+            name: "Dexterity",
+            value: 0,
+            mod: 0
+          },
+          {
+            name: "Constitution",
+            value: 0,
+            mod: 0
+          },
+          {
+            name: "Intelligence",
+            value: 0,
+            mod: 0
+          },
+          {
+            name: "Wisdom",
+            value: 0,
+            mod: 0
+          },
+          {
+            name: "Charisma",
+            value: 0,
+            mod: 0
+          }
+        ];
+      }
+    }
+  }
 };
 </script>
 
-<style scoped>
-.seperate {
-  border-style: solid;
-}
-</style>
+<style></style>

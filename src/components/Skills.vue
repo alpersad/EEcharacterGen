@@ -1,37 +1,71 @@
 <template>
-  <div>
-    <b>SKILLS</b>
-    <div class="border" v-for="(value, key) in skills" :key="key">
-      <p>
-        <button v-on:click="$emit('reduceskill', key)">-</button>{{ key
-        }}<button v-on:click="$emit('increaseskill', key)">+</button>
-      </p>
-      <span class="roboto">{{ value }} in 6 </span>
-    </div>
+  <div class="flex flex-wrap gap-px">
+    <Skill v-for="skill in skills" :key="skill.name" :skill="skill" />
   </div>
 </template>
 
 <script>
+import Skill from "./common/skill.vue";
+
 export default {
-  name: "Skills",
-  props: ["skills", "selectedClass"],
-  data() {
-    return {
-      criminal: false,
-    };
+  components: {
+    Skill
   },
-  updated: function () {
-    if (this.selectedClass == "CRIMINAL") {
-      this.criminal = true;
-    } else {
-      this.criminal = false;
+  props: {
+    skills: {
+      type: Array,
+      default() {
+        return [
+          {
+            name: "Athletics",
+            value: 0
+          },
+          {
+            name: "Charm",
+            value: 0
+          },
+          {
+            name: "Contacts",
+            value: 0
+          },
+          {
+            name: "Driving",
+            value: 0
+          },
+          {
+            name: "Forensics",
+            value: 0
+          },
+          {
+            name: "Medicine",
+            value: 0
+          },
+
+          {
+            name: "Perception",
+            value: 0
+          },
+          {
+            name: "Stealth",
+            value: 0
+          },
+          {
+            name: "Technology",
+            value: 0
+          },
+          {
+            name: "Translation",
+            value: 0
+          },
+          {
+            name: "Vandalism",
+            value: 0
+          }
+        ];
+      }
     }
-  },
+  }
 };
 </script>
 
-<style scoped>
-.border {
-  border-style: solid;
-}
-</style>
+<style></style>
