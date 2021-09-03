@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-px">
+  <div class="flex flex-wrap gap-px justify-center sm:justify-start">
     <Skill v-for="skill in skills" :key="skill.name" :skill="skill" />
   </div>
 </template>

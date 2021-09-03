@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-px">
+  <div class="flex flex-wrap gap-px justify-center sm:justify-start">
     <Save v-for="save in saves" :key="save.name" :save="save" />
   </div>
 </template>

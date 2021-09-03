@@ -1,6 +1,15 @@
 <template>
-  <div class="flex flex-wrap gap-px">
-    <Attribute v-for="attr in attributes" :key="attr.name" :attribute="attr" />
+  <div class="w-screen">
+    Attributes
+    <div
+      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+    >
+      <Attribute
+        v-for="attr in attributes"
+        :key="attr.name"
+        :attribute="attr"
+      />
+    </div>
   </div>
 </template>
 

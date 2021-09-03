@@ -1,5 +1,5 @@
 <template>
-  <div class="border-2 border-gray-400 w-56 bg-gray-100">
+  <div class="border-4 border-gray-900 w-56 bg-purple-200">
     <span class="block">{{ attribute.name }}</span>
     <span class="block">{{ attribute.value }} </span>
     <span class="block">{{ attribute.mod }} </span>
