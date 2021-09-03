@@ -155,7 +155,7 @@ export default {
     generateCharacter(character_class) {
       switch (character_class) {
         case "Bodyguard":
-          this.character = new Bodyguard();
+          this.character = new Bodyguard("Name");
           break;
         case "Criminal":
           this.character = new Criminal();

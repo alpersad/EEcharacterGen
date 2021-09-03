@@ -39,7 +39,7 @@ export default {
         "Criminal",
         "Doctor",
         "Explorer",
-        "Mercernary",
+        "Mercenary",
         "Mystic",
         "Occultist",
         "Spook"
