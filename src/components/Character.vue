@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="flex flex-wrap gap-y-16 ">
+    <Selector v-on:character-gen="generateCharacter($event)" />
     <Attributes :attributes="attributes" />
     <Health :health="health" />
     <Saves :saves="saves" />
@@ -12,23 +13,28 @@ import Attributes from "./Attributes.vue";
 import Health from "./Health.vue";
 import Saves from "./Saves.vue";
 import Skills from "./Skills.vue";
+import Selector from "./Selector.vue";
 import { Bodyguard } from "../js/eeclass/bodyguard";
+import { Criminal } from "../js/eeclass/criminal";
+import { Doctor } from "../js/eeclass/doctor";
+import { Explorer } from "../js/eeclass/explorers";
+import { Mercenary } from "../js/eeclass/mercenaries";
+import { Mystic } from "../js/eeclass/mystics";
+import { Occultist } from "../js/eeclass/occultists";
+import { Spook } from "../js/eeclass/spook";
 
 export default {
   components: {
     Attributes,
     Health,
     Saves,
-    Skills
+    Skills,
+    Selector
   },
   data() {
     return {
       character: {}
     };
-  },
-  beforeMount() {
-    this.character = new Bodyguard("Tzaki");
-    console.log(this.character.toString());
   },
   computed: {
     attributes() {
@@ -143,6 +149,39 @@ export default {
           value: this.character.vandalism
         }
       ];
+    }
+  },
+  methods: {
+    generateCharacter(character_class) {
+      switch (character_class) {
+        case "Bodyguard":
+          this.character = new Bodyguard();
+          break;
+        case "Criminal":
+          this.character = new Criminal();
+          break;
+        case "Doctor":
+          this.character = new Doctor();
+          break;
+        case "Explorer":
+          this.character = new Explorer();
+          break;
+        case "Mercenary":
+          this.character = new Mercenary();
+          break;
+        case "Mystic":
+          this.character = new Mystic();
+          break;
+        case "Occultist":
+          this.character = new Occultist();
+          break;
+        case "Spook":
+          this.character = new Spook();
+          break;
+        default:
+        // execution should not reach here
+      }
+      console.log(this.character.toString());
     }
   }
 };
