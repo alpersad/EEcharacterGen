@@ -1,7 +1,12 @@
 <template>
-  <div class="flex flex-wrap gap-px justify-center sm:justify-start">
-    <Flesh :flesh="health.flesh" />
-    <Grit :grit="health.grit" />
+  <div class="w-screen">
+    Health
+    <div
+      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+    >
+      <Flesh :flesh="health.flesh" />
+      <Grit :grit="health.grit" />
+    </div>
   </div>
 </template>
 

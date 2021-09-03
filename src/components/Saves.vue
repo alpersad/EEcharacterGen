@@ -1,6 +1,11 @@
 <template>
-  <div class="flex flex-wrap gap-px justify-center sm:justify-start">
-    <Save v-for="save in saves" :key="save.name" :save="save" />
+  <div class="w-screen">
+    Saves
+    <div
+      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+    >
+      <Save v-for="save in saves" :key="save.name" :save="save" />
+    </div>
   </div>
 </template>
 

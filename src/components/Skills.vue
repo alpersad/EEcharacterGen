@@ -1,6 +1,11 @@
 <template>
-  <div class="flex flex-wrap gap-px justify-center sm:justify-start">
-    <Skill v-for="skill in skills" :key="skill.name" :skill="skill" />
+  <div class="w-screen">
+    Skills
+    <div
+      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+    >
+      <Skill v-for="skill in skills" :key="skill.name" :skill="skill" />
+    </div>
   </div>
 </template>
 

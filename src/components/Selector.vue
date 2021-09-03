@@ -3,7 +3,7 @@
     Character Select
     <div class="flex justify-center ">
       <select
-        class="border-2 border-gray-900 rounded-md"
+        class="border-2 border-gray-900 rounded-md p-3"
         name="character"
         id="character"
         v-model="character"
