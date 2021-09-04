@@ -66,7 +66,7 @@ export class Mystic extends Character {
    * @returns {Number} Charm Save of the character
    */
   get charm() {
-    let charm = this.skills.charm + this.charismaModifier;
+    let charm = this.skills.charm + this.charismaModifier + 1;
     charm = charm < 1 ? 1 : charm > 6 ? 6 : charm;
     return charm;
   }
