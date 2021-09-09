@@ -13,7 +13,11 @@
       </span>
     </div>
 
-    <img class="rounded-sm " src="../icons/chest-armor.svg" alt="Icon" />
+    <img
+      class="rounded-sm "
+      src="../../assets/icons/chest-armor.svg"
+      alt="Icon"
+    />
   </div>
 </template>
 

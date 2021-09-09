@@ -13,7 +13,11 @@
       </span>
     </div>
 
-    <img class="rounded-sm " src="../icons/fleshy-mass.svg" alt="Icon" />
+    <img
+      class="rounded-sm "
+      src="../../assets/icons/fleshy-mass.svg"
+      alt="Icon"
+    />
   </div>
 </template>
 

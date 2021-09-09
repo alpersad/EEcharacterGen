@@ -1,5 +1,5 @@
 <template>
-  <Character />
+  <Character class="z-50" />
 </template>
 
 <script>

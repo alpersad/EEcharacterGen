@@ -1,8 +1,8 @@
 <template>
   <div class="w-screen">
-    Skills
+    <section-title>Skills</section-title>
     <div
-      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+      class="flex flex-wrap justify-center gap-x-3 gap-y-3 sm:justify-start sm:ml-5"
     >
       <Skill v-for="skill in skills" :key="skill.name" :skill="skill" />
     </div>
@@ -11,10 +11,12 @@
 
 <script>
 import Skill from "./common/skill.vue";
+import SectionTitle from "./common/section-title.vue";
 
 export default {
   components: {
-    Skill
+    Skill,
+    "section-title": SectionTitle
   },
   props: {
     skills: {

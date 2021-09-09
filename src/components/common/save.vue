@@ -26,7 +26,7 @@ export default {
         return {
           name: "Skill",
           value: 0,
-          icon: require("../icons/fedora.svg")
+          icon: require("../../assets/icons/fedora.svg")
         };
       }
     }

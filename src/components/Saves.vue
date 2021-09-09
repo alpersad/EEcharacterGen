@@ -1,8 +1,8 @@
 <template>
   <div class="w-screen">
-    Saves
+    <section-title>Saves</section-title>
     <div
-      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+      class="flex flex-wrap justify-center gap-x-3 gap-y-3 sm:justify-start sm:ml-5"
     >
       <Save v-for="save in saves" :key="save.name" :save="save" />
     </div>
@@ -11,10 +11,12 @@
 
 <script>
 import Save from "./common/save.vue";
+import SectionTitle from "./common/section-title.vue";
 
 export default {
   components: {
-    Save
+    Save,
+    "section-title": SectionTitle
   },
   props: {
     saves: {

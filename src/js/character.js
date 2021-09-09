@@ -29,7 +29,8 @@ export class Character {
    * @returns {String} Output of base character information
    */
   toString() {
-    return `Attributes : 
+    return `${this.name}
+Attributes : 
   Strength : ${this.strength}
     Str Modifer : ${this.strengthModifier}
   Dexterity : ${this.dexterity}
@@ -80,6 +81,14 @@ ${this.skills.toString()}
 Equipment : ${this.equipment}
 Resource Level : ${this.resource}
 Armour Class : ${this.armourClass}`;
+  }
+
+  /**
+   *
+   * @returns {String} Name of the character
+   */
+  get name() {
+    return this.name;
   }
 
   /**

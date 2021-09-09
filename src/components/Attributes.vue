@@ -1,8 +1,10 @@
 <template>
   <div class="w-screen">
-    Attributes
+    <section-title>
+      Attributes
+    </section-title>
     <div
-      class="flex flex-wrap gap-x-3 gap-y-3 justify-center sm:justify-start sm:ml-5"
+      class="flex flex-wrap justify-center gap-x-3 gap-y-3 sm:justify-start sm:ml-5"
     >
       <Attribute
         v-for="attr in attributes"
@@ -15,9 +17,12 @@
 
 <script>
 import Attribute from "./common/attribute.vue";
+import SectionTitle from "./common/section-title.vue";
+
 export default {
   components: {
-    Attribute
+    Attribute,
+    "section-title": SectionTitle
   },
   props: {
     attributes: {

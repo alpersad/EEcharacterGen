@@ -43,37 +43,37 @@ export default {
           name: "Strength",
           value: this.character.strength || 0,
           mod: this.character.strengthModifier || 0,
-          icon: require("./icons/weight-lifting-up.svg")
+          icon: require("../assets/icons/weight-lifting-up.svg")
         },
         {
           name: "Dexterity",
           value: this.character.dexterity || 0,
           mod: this.character.dexterityModifier || 0,
-          icon: require("./icons/dodging.svg")
+          icon: require("../assets/icons/dodging.svg")
         },
         {
           name: "Constitution",
           value: this.character.constitution || 0,
           mod: this.character.constitutionModifier || 0,
-          icon: require("./icons/heart-shield.svg")
+          icon: require("../assets/icons/heart-shield.svg")
         },
         {
           name: "Intelligence",
           value: this.character.intelligence || 0,
           mod: this.character.intelligenceModifier || 0,
-          icon: require("./icons/brain.svg")
+          icon: require("../assets/icons/brain.svg")
         },
         {
           name: "Wisdom",
           value: this.character.wisdom || 0,
           mod: this.character.wisdomModifier || 0,
-          icon: require("./icons/wisdom.svg")
+          icon: require("../assets/icons/wisdom.svg")
         },
         {
           name: "Charisma",
           value: this.character.charisma || 0,
           mod: this.character.charismaModifier || 0,
-          icon: require("./icons/fedora.svg")
+          icon: require("../assets/icons/fedora.svg")
         }
       ];
     },
@@ -88,27 +88,27 @@ export default {
         {
           name: "Stunning",
           value: this.character.stun || 0,
-          icon: require("./icons/star-swirl.svg")
+          icon: require("../assets/icons/star-swirl.svg")
         },
         {
           name: "Poison",
           value: this.character.poison || 0,
-          icon: require("./icons/poison-bottle.svg")
+          icon: require("../assets/icons/poison-bottle.svg")
         },
         {
           name: "Hazards",
           value: this.character.hazard || 0,
-          icon: require("./icons/banana-peel.svg")
+          icon: require("../assets/icons/banana-peel.svg")
         },
         {
           name: "Machines",
           value: this.character.machine || 0,
-          icon: require("./icons/vintage-robot.svg")
+          icon: require("../assets/icons/vintage-robot.svg")
         },
         {
           name: "Magic",
           value: this.character.magic || 0,
-          icon: require("./icons/magic-swirl.svg")
+          icon: require("../assets/icons/magic-swirl.svg")
         }
       ];
     },
@@ -117,58 +117,58 @@ export default {
         {
           name: "Athletics",
           value: this.character.athletics || 0,
-          icon: require("./icons/podium-winner.svg")
+          icon: require("../assets/icons/podium-winner.svg")
         },
         {
           name: "Charm",
           value: this.character.charm || 0,
-          icon: require("./icons/cupidon-arrow.svg")
+          icon: require("../assets/icons/cupidon-arrow.svg")
         },
         {
           name: "Contacts",
           value: this.character.contact || 0,
-          icon: require("./icons/talk.svg")
+          icon: require("../assets/icons/talk.svg")
         },
         {
           name: "Driving",
           value: this.character.driving || 0,
-          icon: require("./icons/city-car.svg")
+          icon: require("../assets/icons/city-car.svg")
         },
         {
           name: "Forensics",
           value: this.character.forensics || 0,
-          icon: require("./icons/magnifying-glass.svg")
+          icon: require("../assets/icons/magnifying-glass.svg")
         },
         {
           name: "Medicine",
           value: this.character.medicine || 0,
-          icon: require("./icons/medicine-pills.svg")
+          icon: require("../assets/icons/medicine-pills.svg")
         },
 
         {
           name: "Perception",
           value: this.character.perception || 0,
-          icon: require("./icons/eyeball.svg")
+          icon: require("../assets/icons/eyeball.svg")
         },
         {
           name: "Stealth",
           value: this.character.stealth || 0,
-          icon: require("./icons/ninja-mask.svg")
+          icon: require("../assets/icons/ninja-mask.svg")
         },
         {
           name: "Technology",
           value: this.character.technology || 0,
-          icon: require("./icons/pc.svg")
+          icon: require("../assets/icons/pc.svg")
         },
         {
           name: "Translation",
           value: this.character.translation || 0,
-          icon: require("./icons/convince.svg")
+          icon: require("../assets/icons/convince.svg")
         },
         {
           name: "Vandalism",
           value: this.character.vandalism || 0,
-          icon: require("./icons/hammer-break.svg")
+          icon: require("../assets/icons/hammer-break.svg")
         }
       ];
     }
