@@ -1,8 +1,8 @@
 <template>
   <div
-    class="grid w-64 grid-cols-4 px-2 pt-3 pb-1 bg-black border-4 border-gray-100 rounded-md"
+    class="grid w-64 grid-cols-4 bg-black border-4 border-gray-100 rounded-md"
   >
-    <div class="col-span-3">
+    <div class="col-span-3 p-2">
       <div class="grid grid-rows-2">
         <div>
           <span
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class="col-span-1">
-      <img class="col-span-1 p-2 ml-2" :src="attribute.icon" alt="Icon" />
+      <img class="col-span-1 p-2 mt-2" :src="attribute.icon" alt="Icon" />
     </div>
     <!-- <span
       class="flex items-center justify-center col-span-2 text-2xl font-medium text-gray-400 uppercase"
