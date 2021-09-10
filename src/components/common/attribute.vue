@@ -1,12 +1,12 @@
 <template>
   <div
-    class="grid w-64 grid-cols-4 p-2 bg-black border-4 border-gray-100 rounded-md"
+    class="grid w-64 grid-cols-4 px-2 pt-3 pb-1 bg-black border-4 border-gray-100 rounded-md"
   >
     <div class="col-span-3">
       <div class="grid grid-rows-2">
         <div>
           <span
-            class="flex justify-center text-2xl font-medium text-gray-300 uppercase"
+            class="flex justify-center text-2xl font-medium text-gray-400 uppercase"
             >{{ attribute.name }}
           </span>
         </div>
