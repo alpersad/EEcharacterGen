@@ -1,23 +1,19 @@
 <template>
   <div
-    class="grid w-64 grid-cols-5 border-4 border-gray-900 rounded-md bg-gradient-to-r from-gray-50 via-gray-200 to-gray-400"
+    class="grid w-64 grid-cols-3 bg-black border-4 border-gray-100 rounded-md"
   >
-    <div class="grid col-span-4 grid-rows-2">
+    <div class="grid col-span-2 grid-rows-2 p-1">
       <span
-        class="flex items-center justify-center text-2xl font-semibold text-gray-600 uppercase"
+        class="flex items-center justify-center text-2xl font-medium text-gray-400 uppercase"
         >Grit
       </span>
       <span
-        class="flex items-center justify-center col-span-1 text-4xl font-bold text-gray-900"
+        class="flex items-center justify-center col-span-1 text-2xl font-bold text-gray-100"
         >{{ grit }}
       </span>
     </div>
 
-    <img
-      class="rounded-sm "
-      src="../../assets/icons/chest-armor.svg"
-      alt="Icon"
-    />
+    <img class="p-2" src="../../assets/icons/chest-armor.svg" alt="Icon" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap gap-y-16 ">
+  <div class="flex flex-wrap h-full bg-gray-900 bg-opacity-50 gap-y-9 ">
     <Selector v-on:character-gen="generateCharacter($event)" />
     <Attributes :attributes="attributes" />
     <Health :health="health" />
