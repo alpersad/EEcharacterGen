@@ -27,21 +27,6 @@
     <div class="col-span-1">
       <img class="col-span-1 p-2 mt-2" :src="attribute.icon" alt="Icon" />
     </div>
-    <!-- <span
-      class="flex items-center justify-center col-span-2 text-2xl font-medium text-gray-400 uppercase"
-      >{{ attribute.name }}
-    </span>
-    <img class="col-span-1 rounded-sm" :src="attribute.icon" alt="Icon" />
-    <span
-      class="flex items-center justify-center col-span-4 text-4xl font-bold text-gray-900"
-    >
-      {{ attribute.mod }}
-    </span>
-    <span
-      class="flex items-center justify-center col-span-1 text-xl font-light"
-    >
-      {{ attribute.value }}
-    </span> -->
   </div>
 </template>
 
