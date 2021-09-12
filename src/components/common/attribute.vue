@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid w-64 grid-cols-4 bg-black border-4 border-gray-100 rounded-md"
+    class="grid w-64 grid-cols-4 bg-black border-2 border-gray-100 rounded-md"
   >
     <div class="col-span-3 p-2">
       <div class="grid grid-rows-2">

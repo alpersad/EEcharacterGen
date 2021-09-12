@@ -1,16 +1,18 @@
 <template>
-  <div class="w-screen">
-    <section-title>
-      Attributes
-    </section-title>
-    <div
-      class="flex flex-wrap justify-center gap-x-3 gap-y-3 sm:justify-start sm:ml-5"
-    >
-      <Attribute
-        v-for="attr in attributes"
-        :key="attr.name"
-        :attribute="attr"
-      />
+  <div
+    class="flex flex-wrap justify-center w-screen p-5 m-5 bg-gray-800 bg-opacity-50 border-2 border-gray-400 sm:w-max"
+  >
+    <div class="grid max-w-max justify-items-center gap-y-3 gap-x-3">
+      <section-title>
+        Attributes
+      </section-title>
+      <div class="grid grid-cols-1 gap-y-3">
+        <Attribute
+          v-for="attr in attributes"
+          :key="attr.name"
+          :attribute="attr"
+        />
+      </div>
     </div>
   </div>
 </template>

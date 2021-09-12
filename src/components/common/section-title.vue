@@ -1,6 +1,8 @@
 <template>
-  <div class="flex justify-center max-w-full text-2xl font-extrabold font-">
-    <span class="p-1 text-gray-300 uppercase rounded-sm w-96">
+  <div class="border-b-2 w-96">
+    <span
+      class="p-1 text-2xl font-extrabold text-gray-300 uppercase rounded-sm "
+    >
       <slot />
     </span>
   </div>
