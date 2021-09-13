@@ -1,9 +1,9 @@
 <template>
-  <div class="w-screen">
-    <section-title>Health</section-title>
-    <div
-      class="flex flex-wrap justify-center gap-x-3 gap-y-3 sm:justify-start sm:ml-5"
-    >
+  <div
+    class="flex flex-wrap justify-center w-screen p-1 pb-5 mx-2 bg-gray-800 bg-opacity-50 border-2 border-gray-400 sm:p-5 sm:m-5 sm:w-max sm:h-full"
+  >
+    <div class="grid max-w-max justify-items-center gap-y-3">
+      <section-title>Health</section-title>
       <Flesh :flesh="health.flesh" />
       <Grit :grit="health.grit" />
     </div>

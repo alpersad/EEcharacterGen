@@ -1,31 +1,16 @@
 <template>
-  <div
-    class="grid w-64 grid-cols-4 bg-black border-2 border-gray-100 rounded-md"
-  >
-    <div class="col-span-3 p-2">
-      <div class="grid grid-rows-2">
-        <div>
-          <span
-            class="flex justify-center text-2xl font-medium text-gray-400 uppercase"
-            >{{ attribute.name }}
-          </span>
-        </div>
-        <div class="grid grid-cols-2">
-          <div class="flex justify-end col-span-1">
-            <span class="text-2xl font-bold text-gray-100">
-              {{ attribute.mod }}
-            </span>
-          </div>
-          <div class="flex justify-end ">
-            <span class="mt-1 text-xl font-light text-gray-400 mr-7">
-              {{ attribute.value }}
-            </span>
-          </div>
-        </div>
+  <div class="flex h-16 bg-black border-2 border-gray-400 w-72">
+    <img class="w-10 p-2" :src="attribute.icon" alt="Icon" />
+    <div class="flex justify-between my-4 ml-2 w-60">
+      <span class="text-xl text-gray-100 uppercase">{{ attribute.name }} </span>
+      <div class="flex justify-end pb-1 ml-4 mr-2">
+        <span class="mr-8 text-xl text-gray-100 uppercase">
+          {{ attribute.mod }}
+        </span>
+        <span class="absolute pt-2 text-xs text-gray-100 uppercase">
+          ({{ attribute.value }})
+        </span>
       </div>
-    </div>
-    <div class="col-span-1">
-      <img class="col-span-1 p-2 mt-2" :src="attribute.icon" alt="Icon" />
     </div>
   </div>
 </template>

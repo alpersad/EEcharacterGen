@@ -1,19 +1,14 @@
 <template>
-  <div
-    class="grid w-64 h-24 grid-cols-3 bg-black border-4 border-gray-100 rounded-md"
-  >
-    <div class="grid col-span-2 grid-rows-2 p-2">
-      <span
-        class="flex items-center justify-center text-2xl font-medium text-gray-400 uppercase"
-        >Flesh
-      </span>
-      <span
-        class="flex items-center justify-center text-2xl font-bold text-gray-100"
-        >{{ flesh }}
-      </span>
+  <div class="flex h-16 bg-black border-2 border-gray-400 w-72">
+    <img class="w-10 p-2" src="../../assets/icons/fleshy-mass.svg" alt="Icon" />
+    <div class="flex justify-between my-4 ml-2 w-60">
+      <span class="text-xl text-gray-100 uppercase"> Flesh </span>
+      <div class="flex justify-end pb-1 ml-4 mr-2">
+        <span class="mr-8 text-xl text-gray-100 uppercase">
+          {{ flesh }}
+        </span>
+      </div>
     </div>
-
-    <img class="p-2" src="../../assets/icons/fleshy-mass.svg" alt="Icon" />
   </div>
 </template>
 
