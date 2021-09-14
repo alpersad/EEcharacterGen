@@ -5,7 +5,6 @@
  */
 
 import { Character } from "../character";
-import { Attributes } from "../attributes";
 import { Health } from "../health";
 import { Saves } from "../saves";
 import { Skills } from "../skills";
@@ -37,7 +36,6 @@ export class Bodyguard extends Character {
 
   constructor(name) {
     super(name);
-    this.attributes = new Attributes();
     this.health = new Health(this.fleshDie, this.gritDie);
     this.saves = new Saves(
       this.baseStun,

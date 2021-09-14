@@ -53,7 +53,7 @@ class Attribute {
 
   calcDoppelganger() {
     this.value = 21 - this.value;
-    this.calcModifier();
+    this.modifier = this.calcModifier();
   }
 
   toString() {
@@ -78,6 +78,15 @@ class Attributes {
     ${this.intelligence.toString()}
     ${this.wisdom.toString()}
     ${this.charisma.toString()}`;
+  }
+
+  doppelganger() {
+    this.strength.calcDoppelganger();
+    this.dexterity.calcDoppelganger();
+    this.constitution.calcDoppelganger();
+    this.intelligence.calcDoppelganger();
+    this.wisdom.calcDoppelganger();
+    this.charisma.calcDoppelganger();
   }
 }
 

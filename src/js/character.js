@@ -5,6 +5,8 @@
  *
  */
 
+import { Attributes } from "./attributes";
+
 export class Character {
   name;
   level = 1;
@@ -22,6 +24,7 @@ export class Character {
    */
   constructor(name) {
     this.name = name;
+    this.attributes = new Attributes();
   }
 
   /**
@@ -81,6 +84,10 @@ ${this.skills.toString()}
 Equipment : ${this.equipment}
 Resource Level : ${this.resource}
 Armour Class : ${this.armourClass}`;
+  }
+
+  doppelganger() {
+    this.attributes.doppelganger();
   }
 
   /**

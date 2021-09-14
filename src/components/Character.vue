@@ -5,7 +5,10 @@
     <div
       class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max gap-y-9"
     >
-      <Selector v-on:character-gen="generateCharacter($event)" />
+      <Selector
+        v-on:character-gen="generateCharacter($event)"
+        v-on:doppelganger="doppelganger()"
+      />
       <Health :health="health" />
     </div>
     <Attributes :attributes="attributes" />
@@ -210,6 +213,12 @@ export default {
         // execution should not reach here
       }
       console.log(this.character.toString());
+    },
+    doppelganger() {
+      this.character.doppelganger();
+      console.log("Doppelganger");
+      console.log(this.character.toString());
+      this.$forceUpdate();
     }
   }
 };
