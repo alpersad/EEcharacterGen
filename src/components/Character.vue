@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-wrap h-auto py-2 gap-y-9 sm:gap-y-0 sm:max-w-screen-xl">
+  <div
+    class="flex flex-wrap h-auto py-2 sm:py-1 gap-y-9 sm:gap-y-0 sm:max-w-screen-xl"
+  >
     <div
       class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max gap-y-9"
     >
