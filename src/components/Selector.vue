@@ -1,7 +1,9 @@
 <template>
-  <div class="w-screen">
-    <section-title>Character Select</section-title>
-    <div class="flex justify-center ">
+  <div
+    class="flex justify-center bg-gray-800 bg-opacity-75 border-2 border-gray-400 sm:p-5 sm:m-5 sm:w-max sm:h-full "
+  >
+    <div class="grid my-3 max-w-max justify-items-center gap-y-3">
+      <section-title>Character Select</section-title>
       <select
         class="p-3 bg-gray-100 border-2 border-gray-900 rounded-md"
         name="character"
@@ -14,11 +16,8 @@
           :key="character"
           :value="character"
           >{{ character }}</option
-        >
-      </select>
-    </div>
-    <div class="flex justify-center mt-5">
-      <button
+        > </select
+      ><button
         v-on:click="emit()"
         class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
       >
