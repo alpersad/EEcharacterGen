@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap justify-center w-screen p-1 pb-5 mx-2 bg-gray-800 bg-opacity-75 border-2 border-gray-400 sm:p-5 sm:mx-5 sm:w-max sm:h-full"
+    class="flex flex-wrap justify-center w-screen p-1 pb-5 mx-2 bg-gray-800 bg-opacity-75 border-2 border-gray-400 sm:p-5 sm:mx-5 sm:max-w-screen-xl sm:h-full"
   >
     <section-title class="mb-5">Skills</section-title>
 

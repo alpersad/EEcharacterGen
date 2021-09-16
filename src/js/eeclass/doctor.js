@@ -58,4 +58,25 @@ export class Doctor extends Character {
       this.baseVandalism
     );
   }
+
+  /**
+   *
+   * @returns {String} Output of base character information
+   */
+  toString() {
+    return (
+      `${super.toString()}` +
+      `******Improved Medicine****** (CALCULATED)\n` +
+      `Doctors start out with a 5-in-6 chance at the  Medicine  skill,  representing  the  fact  that  they  actually have professional experience in the medical field.\n\n` +
+      `***Automatic  Healing  Pool***\n` +
+      `Furthermore,  unlike  other characters,  doctors  can  treat  their  allies  wounds  far  more effectively.\n` +
+      `When they have proper tools and space to work, they can spend a turn treating injuries and immediately heal their patient by a single point of flesh\n` +
+      `This  level  of  focus  is  difficult,  and  can’t  be  maintained indefinitely.\n` +
+      `At first level, they can heal up to 5 flesh each day in this way; this amount increases as they gain levels.\n` +
+      `Things  without  animal  biology  that  can’t  be  healed  by  a Medicine skill roll can’t be healed in this way.\n\n` +
+      `******Medical Experiments:******\n` +
+      `Finally, a doctor with time, materials and a laboratory to work in can attempt all manner of medical marvels.\n` +
+      `The precise details vary, and depend more on player inventiveness  than  specific  mechanics;  see  the  section  on Medical Experiments on pages 58-59 for more details. \n`
+    );
+  }
 }

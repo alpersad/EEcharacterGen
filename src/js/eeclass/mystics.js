@@ -68,4 +68,26 @@ export class Mystic extends Character {
     charm = charm < 1 ? 1 : charm > 6 ? 6 : charm;
     return charm;
   }
+
+  /**
+   *
+   * @returns {String} Output of base character information
+   */
+  toString() {
+    return (
+      `${super.toString()}` +
+      `******Improved Charm****** (CALCULATED)\n` +
+      `Mystics start with a basic 1 in 6 chance at Charm, which slowly improves as they gain levels\n\n` +
+      `*******Mystic Spellcasting********\n` +
+      `A mystic can cast spells, but in a very different fashion to an occultist.\n` +
+      `A mystic has a set number of spells known to them. These are all that their patron is willing to  grant  them,  and  they  may  not  learn  any  more  by themselves\n` +
+      `To cast a spell, a mystic must spend a round in supplication to their patron, and make a Charm roll to see if the being answers their pleas\n` +
+      `If the Charm roll is successful, the spell is cast successfully. If the roll Charm roll fails then roll a d20 on The Fickle Whims Of The Divine (table 36) to determine what has gone wrong.\n\n` +
+      `******Starting  Spells******\n` +
+      `A  mystic  starts  off  knowing  two  random Rank 1 spells.\n` +
+      `Based off these rolls, a mystic’s player should work with the GM come up with a very rough picture of their patron’s nature.\n` +
+      `As they mystic gains levels, their patron will grant them additional spells.\n` +
+      `Table 7 states which rank spell is learned at each level; a random spell of this rank is learned.\n`
+    );
+  }
 }

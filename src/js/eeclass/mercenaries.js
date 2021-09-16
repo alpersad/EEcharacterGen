@@ -58,4 +58,22 @@ export class Mercenary extends Character {
       this.baseVandalism
     );
   }
+
+  /**
+   *
+   * @returns {String} Output of base character information
+   */
+  toString() {
+    return (
+      `${super.toString()}` +
+      `******Improved Accuracy******\n` +
+      `Unlike other classes, the mercenary gets a bonus to their rolls to hit on top of their attribute modifiers. \n` +
+      `This bonus starts at +1 and increases as they gain levels.\n\n` +
+      `*******Combat  Manoeuvres********\n` +
+      `A mercenary  takes  no  penalty  when making the Fight  Defensively,  Fight  Recklessly,  Go  for  the Kill, and Aim combat actions.\n` +
+      `A mercenary can take the Covering Fire combat action with a pistol, standard rifle, marksman’s rifle, or shotgun. \n\n` +
+      `******Well Equipped******\n` +
+      `A mercenary gets two extra items in character creation,  which  must  be  taken  from  the  Melee  Weapons, Ranged Weapons or Armour lists.\n`
+    );
+  }
 }

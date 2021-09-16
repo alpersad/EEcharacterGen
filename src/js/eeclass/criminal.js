@@ -58,4 +58,22 @@ export class Criminal extends Character {
       this.baseVandalism
     );
   }
+
+  /**
+   *
+   * @returns {String} Output of base character information
+   */
+  toString() {
+    return (
+      `${super.toString()}` +
+      `******Improved Skills******\n` +
+      `At first level, the criminal gets 6 skill points that are each assigned to a skill.\n` +
+      `Each point spent improves the skill chance of the skill it is assigned to by 1, up to the normal maximum of 6-in-6.\n` +
+      `At  each  level  thereafter,  the  criminal  can  assign  two  more points to skills.\n` +
+      `There  are  11  skills  that  a  criminal  can  assign  points  to: \n` +
+      `Athletics,  Charm,  Contacts,  Driving,  Forensics,  Medicine, Perception, Stealth, Technology, Translation and Vandalism.\n\n` +
+      `******Well Equipped******\n` +
+      `A Criminal gets two extra items in character creation, which must be from the Adventuring Gear list.\n`
+    );
+  }
 }

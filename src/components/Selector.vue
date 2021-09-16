@@ -18,10 +18,10 @@
           >{{ character }}</option
         >
       </select>
-      <div>
+      <div class="inline-block space-x-2">
         <button
           v-on:click="emit()"
-          class="p-2 mr-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
+          class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
         >
           Generate
         </button>
@@ -30,6 +30,12 @@
           class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
         >
           Doppelganger
+        </button>
+        <button
+          v-on:click="$emit('download')"
+          class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
+        >
+          Download
         </button>
       </div>
     </div>
@@ -43,7 +49,7 @@ export default {
   components: {
     "section-title": SectionTitle
   },
-  emits: ["character-gen", "doppelganger"],
+  emits: ["character-gen", "doppelganger", "download"],
   data() {
     return {
       character: null,

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-wrap h-auto py-2 sm:py-0 gap-y-9 sm:gap-y-0 sm:max-w-screen-xl"
+    class="flex flex-wrap h-auto py-2 sm:py-0 gap-y-9 sm:gap-y-0 sm:max-w-screen-2xl"
   >
     <div
       class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max gap-y-9"
@@ -8,6 +8,7 @@
       <Selector
         v-on:character-gen="generateCharacter($event)"
         v-on:doppelganger="doppelganger()"
+        v-on:download="download()"
       />
       <Health :health="health" />
     </div>
@@ -31,6 +32,7 @@ import { Mercenary } from "../js/eeclass/mercenaries";
 import { Mystic } from "../js/eeclass/mystics";
 import { Occultist } from "../js/eeclass/occultists";
 import { Spook } from "../js/eeclass/spook";
+import { saveAs } from "file-saver";
 
 export default {
   components: {
@@ -42,7 +44,8 @@ export default {
   },
   data() {
     return {
-      character: {}
+      character: {},
+      class: null
     };
   },
   computed: {
@@ -184,9 +187,10 @@ export default {
   },
   methods: {
     generateCharacter(character_class) {
+      this.class = character_class;
       switch (character_class) {
         case "Bodyguard":
-          this.character = new Bodyguard("Name");
+          this.character = new Bodyguard();
           break;
         case "Criminal":
           this.character = new Criminal();
@@ -215,10 +219,24 @@ export default {
       console.log(this.character.toString());
     },
     doppelganger() {
+      if (!this.class) {
+        // prevent doppelganger when no character class is generated
+        return;
+      }
       this.character.doppelganger();
       console.log("Doppelganger");
       console.log(this.character.toString());
       this.$forceUpdate();
+    },
+    download() {
+      if (!this.class) {
+        // prevent download when no character class is generated
+        return;
+      }
+      let blob = new Blob([this.character.toString()], {
+        type: "text/plain;charset=utf-8"
+      });
+      saveAs(blob, `${this.class}.txt`);
     }
   }
 };

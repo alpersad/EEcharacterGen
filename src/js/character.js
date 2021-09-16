@@ -32,44 +32,46 @@ export class Character {
    * @returns {String} Output of base character information
    */
   toString() {
-    return `${this.name}
-Attributes : 
-  Strength : ${this.strength}
-    Str Modifer : ${this.strengthModifier}
-  Dexterity : ${this.dexterity}
-    Dex Modifier : ${this.dexterityModifier}
-  Constitution : ${this.constitution}
-    Con Modifier : ${this.constitutionModifier}
-  Intelligence : ${this.intelligence}
-    Int Modifier : ${this.intelligenceModifier}
-  Wisdom : ${this.wisdom}
-    Wis Modifier : ${this.wisdomModifier}
-  Charisma : ${this.charisma}
-    Cha Modifier : ${this.charismaModifier}
-Health : 
-  Flesh : ${this.flesh}
-  Grit : ${this.grit}
-Saves : 
-  Stunning : ${this.stun}
-  Poison : ${this.poison}
-  Hazard : ${this.hazard}
-  Machines : ${this.machine}
-  Magic : ${this.magic}
-Skills : 
-  Athletics : ${this.athletics}
-  Charm : ${this.charm}
-  Contact : ${this.contact}
-  Driving : ${this.driving}
-  Forensics : ${this.forensics}
-  Medicine : ${this.medicine}
-  Perception : ${this.perception}
-  Stealth : ${this.stealth}
-  Technology : ${this.technology}
-  Translation : ${this.translation}
-  Vandalism :${this.vandalism}
-Equipment : ${this.equipment}
-Resource Level : ${this.resource}
-Armour Class : ${this.armourClass}`;
+    return (
+      `${this.name}\n` +
+      `--------Attributes-------\n` +
+      `Strength : ${this.strength}\n` +
+      `\tStr Modifer : ${this.strengthModifier}\n` +
+      `Dexterity : ${this.dexterity}\n` +
+      `\tDex Modifier : ${this.dexterityModifier}\n` +
+      `Constitution : ${this.constitution}\n` +
+      `\tCon Modifier : ${this.constitutionModifier}\n` +
+      `Intelligence : ${this.intelligence}\n` +
+      `\tInt Modifier : ${this.intelligenceModifier}\n` +
+      `Wisdom : ${this.wisdom}\n` +
+      `\tWis Modifier : ${this.wisdomModifier}\n` +
+      `Charisma : ${this.charisma}\n` +
+      `\tCha Modifier : ${this.charismaModifier}\n\n` +
+      `--------Health--------\n` +
+      `Flesh : ${this.flesh}\n` +
+      `Grit : ${this.grit}\n\n` +
+      `--------Saves--------\n` +
+      `Stunning :${this.stun}+\n` +
+      `Poison :${this.poison}+\n` +
+      `Hazard :${this.hazard}+\n` +
+      `Machines :${this.machine}+\n` +
+      `Magic :${this.magic}+\n\n` +
+      `--------Skills--------\n` +
+      `Athletics :${this.athletics} in 6\n` +
+      `Charm :${this.charm} in 6\n` +
+      `Contact :${this.contact} in 6\n` +
+      `Driving :${this.driving} in 6\n` +
+      `Forensics :${this.forensics} in 6\n` +
+      `Medicine :${this.medicine} in 6\n` +
+      `Perception :${this.perception} in 6\n` +
+      `Stealth :${this.stealth} in 6\n` +
+      `Technology :${this.technology} in 6\n` +
+      `Translation :${this.translation} in 6\n` +
+      `Vandalism :${this.vandalism} in 6\n\n` +
+      `Equipment : ${this.equipment}\n\n` +
+      `Resource Level : ${this.resource}\n\n` +
+      `Armour Class : ${this.armourClass}\n\n`
+    );
   }
 
   /**
