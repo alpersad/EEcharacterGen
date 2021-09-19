@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-wrap h-auto py-2 sm:py-0 gap-y-9 sm:gap-y-0 sm:max-w-screen-2xl"
-  >
+  <div class="flex flex-wrap h-auto py-2 sm:py-0 gap-y-9 sm:gap-y-0">
     <div
       class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max gap-y-9"
     >
@@ -15,6 +13,11 @@
     <Attributes :attributes="attributes" />
     <Saves :saves="saves" />
     <Skills :skills="skills" />
+    <Equipment
+      v-on:update-equipment="updateEquipment($event)"
+      :equipment="equipment"
+      :character-class="characterClass"
+    />
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import Health from "./Health.vue";
 import Saves from "./Saves.vue";
 import Skills from "./Skills.vue";
 import Selector from "./Selector.vue";
+import Equipment from "./Equipment.vue";
 import { Bodyguard } from "../js/eeclass/bodyguard";
 import { Criminal } from "../js/eeclass/criminal";
 import { Doctor } from "../js/eeclass/doctor";
@@ -40,7 +44,8 @@ export default {
     Health,
     Saves,
     Skills,
-    Selector
+    Selector,
+    Equipment
   },
   data() {
     return {
@@ -183,12 +188,18 @@ export default {
           icon: require("../assets/icons/hammer-break.svg")
         }
       ];
+    },
+    equipment() {
+      return this.character.equipment;
+    },
+    characterClass() {
+      return this.character.constructor.name;
     }
   },
   methods: {
-    generateCharacter(character_class) {
-      this.class = character_class;
-      switch (character_class) {
+    generateCharacter(characterClass) {
+      this.class = characterClass;
+      switch (characterClass) {
         case "Bodyguard":
           this.character = new Bodyguard();
           break;
@@ -237,6 +248,10 @@ export default {
         type: "text/plain;charset=utf-8"
       });
       saveAs(blob, `${this.class}.txt`);
+    },
+    updateEquipment(equipment) {
+      this.character.equipmentList = equipment;
+      console.log(this.character.toString());
     }
   }
 };

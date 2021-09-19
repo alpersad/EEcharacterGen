@@ -17,6 +17,7 @@ export class Character {
   baseEquipment = 5;
   baseResource = 1;
   baseArmourClass = 10;
+  equipmentList = [];
 
   /**
    *
@@ -32,6 +33,11 @@ export class Character {
    * @returns {String} Output of base character information
    */
   toString() {
+    let equipmentString = `--------Equipment List--------\n`;
+    this.equipmentList.forEach(equipment => {
+      equipmentString += `${equipment.name}\n`;
+    });
+    equipmentString += `\n`;
     return (
       `${this.name}\n` +
       `--------Attributes-------\n` +
@@ -70,7 +76,8 @@ export class Character {
       `Vandalism :${this.vandalism} in 6\n\n` +
       `Equipment : ${this.equipment}\n\n` +
       `Resource Level : ${this.resource}\n\n` +
-      `Armour Class : ${this.armourClass}\n\n`
+      `Armour Class : ${this.armourClass}\n\n` +
+      `${equipmentString}`
     );
   }
 
@@ -374,6 +381,14 @@ Armour Class : ${this.armourClass}`;
 
   /**
    *
+   * @returns {Number} Base Equipment of the character
+   */
+  get equipmentList() {
+    return this.equipmentList;
+  }
+
+  /**
+   *
    * @returns {Number} Base Resource Level of the character
    */
   get resource() {
@@ -386,5 +401,13 @@ Armour Class : ${this.armourClass}`;
    */
   get armourClass() {
     return this.baseArmourClass + this.dexterityModifier;
+  }
+
+  /**
+   *
+   * @param {Object} equipment sets the equipment list for a character
+   */
+  set equipmentList(equipment) {
+    this.equipmentList = equipment;
   }
 }
