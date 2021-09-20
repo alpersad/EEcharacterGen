@@ -18,7 +18,9 @@
           >{{ character }}</option
         >
       </select>
-      <div class="inline-block space-x-2">
+      <div
+        class="flex flex-col justify-center space-y-2 sm:space-x-2 sm:inline-block"
+      >
         <button
           v-on:click="emit()"
           class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"

@@ -17,7 +17,7 @@
             >
           </div>
           <select
-            class="p-2 ml-2 text-gray-100 bg-black border-2 border-gray-200 w-44 sm:w-96"
+            class="p-2 ml-2 text-gray-100 bg-black border-2 border-gray-200 w-44 sm:w-80"
             v-model="equipmentList[n - 1]"
           >
             <optgroup label="Adventure Gear">
@@ -120,7 +120,7 @@
         class="grid grid-cols-1 gap-y-3 justify-items-center"
       >
         <section-title>
-          Criminal
+          Criminal Bonus
         </section-title>
         <div class="my-2" v-for="n in 2" :key="n">
           <div class="inline-block space-x-2">
@@ -134,7 +134,7 @@
             >
           </div>
           <select
-            class="p-2 ml-2 text-gray-100 bg-black border-2 border-gray-200 w-44 sm:w-96"
+            class="p-2 ml-2 text-gray-100 bg-black border-2 border-gray-200 w-44 sm:w-80"
             v-model="equipmentList[equipment + n - 1]"
           >
             <optgroup label="Adventure Gear">
@@ -158,7 +158,7 @@
         class="grid grid-cols-1 gap-y-3 justify-items-center"
       >
         <section-title>
-          Mercenary
+          Mercenary Bonus
         </section-title>
         <div class="my-2" v-for="n in 2" :key="n">
           <div class="inline-block space-x-2">
@@ -172,7 +172,7 @@
             >
           </div>
           <select
-            class="p-2 ml-2 text-gray-100 bg-black border-2 border-gray-200 w-44 sm:w-96"
+            class="p-2 ml-2 text-gray-100 bg-black border-2 border-gray-200 w-44 sm:w-80"
             v-model="equipmentList[equipment + n - 1]"
           >
             <optgroup label="Armour">

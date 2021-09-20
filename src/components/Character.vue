@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-wrap h-auto py-2 sm:py-0 gap-y-9 sm:gap-y-0">
+  <div class="flex flex-wrap h-full py-2 sm:py-0 gap-y-9 sm:gap-y-0">
     <div
-      class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max gap-y-9"
+      class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max sm:h-full gap-y-9"
     >
       <Selector
         v-on:character-gen="generateCharacter($event)"
@@ -12,12 +12,12 @@
     </div>
     <Attributes :attributes="attributes" />
     <Saves :saves="saves" />
-    <Skills :skills="skills" />
     <Equipment
       v-on:update-equipment="updateEquipment($event)"
       :equipment="equipment"
       :character-class="characterClass"
     />
+    <Skills :skills="skills" />
   </div>
 </template>
 
