@@ -1,12 +1,10 @@
 <template>
   <div
-    class="flex justify-center bg-gray-800 bg-opacity-75 border-2 border-gray-400 sm:p-5 sm:m-5 sm:w-max sm:max-h-full"
+    class="grid justify-center bg-gray-800 bg-opacity-75 border-2 border-gray-400 p-4 w-max justify-self-center h-full gap-2"
   >
-    <div class="grid my-3 max-w-max justify-items-center gap-y-3">
-      <section-title>Health</section-title>
-      <Flesh :flesh="health.flesh" />
-      <Grit :grit="health.grit" />
-    </div>
+    <section-title>Health</section-title>
+    <Flesh :flesh="health.flesh" />
+    <Grit :grit="health.grit" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <span class="p-2 font-bold text-gray-900 rounded-3xl">
+  <span class="p-2 text-xs font-bold text-gray-900 rounded-3xl">
     <slot />
   </span>
 </template>

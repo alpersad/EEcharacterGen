@@ -1,19 +1,11 @@
 <template>
   <div
-    class="flex justify-center w-screen p-1 pb-5 mx-2 bg-gray-800 bg-opacity-75 border-2 border-gray-400 sm:p-5 sm:m-5 sm:w-max sm:h-full"
+    class="grid justify-center bg-gray-800 bg-opacity-75 border-2 border-gray-400  p-4 w-max justify-self-center  h-full gap-2"
   >
-    <div class="grid max-w-max justify-items-center gap-y-3">
-      <section-title>
-        Attributes
-      </section-title>
-      <div class="grid grid-cols-1 gap-y-3">
-        <Attribute
-          v-for="attr in attributes"
-          :key="attr.name"
-          :attribute="attr"
-        />
-      </div>
-    </div>
+    <section-title>
+      Attributes
+    </section-title>
+    <Attribute v-for="attr in attributes" :key="attr.name" :attribute="attr" />
   </div>
 </template>
 

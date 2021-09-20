@@ -1,46 +1,40 @@
 <template>
   <div
-    class="flex justify-center bg-gray-800 bg-opacity-75 border-2 border-gray-400 sm:p-5 sm:m-5 sm:w-max sm:h-full "
+    class="grid justify-center bg-gray-800 bg-opacity-75 border-2 border-gray-400 gap-y-1 p-4 w-max h-full justify-self-center"
   >
-    <div class="grid my-3 max-w-max justify-items-center gap-y-3">
-      <section-title>Character Select</section-title>
-      <select
-        class="p-3 bg-gray-100 border-2 border-gray-900 rounded-md"
-        name="character"
-        id="character"
-        v-model="character"
+    <section-title>Character Select</section-title>
+    <select
+      class="p-3 bg-gray-100 border-2 border-gray-900 rounded-md w-max justify-self-center"
+      name="character"
+      id="character"
+      v-model="character"
+    >
+      <option :value="null" disabled>Select Character Class</option>
+      <option
+        v-for="character in characters"
+        :key="character"
+        :value="character"
+        >{{ character }}</option
       >
-        <option :value="null" disabled>Select Character Class</option>
-        <option
-          v-for="character in characters"
-          :key="character"
-          :value="character"
-          >{{ character }}</option
-        >
-      </select>
-      <div
-        class="flex flex-col justify-center space-y-2 sm:space-x-2 sm:inline-block"
-      >
-        <button
-          v-on:click="emit()"
-          class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
-        >
-          Generate
-        </button>
-        <button
-          v-on:click="$emit('doppelganger')"
-          class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
-        >
-          Doppelganger
-        </button>
-        <button
-          v-on:click="$emit('download')"
-          class="p-2 bg-blue-900 border-2 border-blue-500 rounded-md text-blue-50 text hover:bg-blue-800 hover:text-blue-50"
-        >
-          Download
-        </button>
-      </div>
-    </div>
+    </select>
+    <button
+      v-on:click="emit()"
+      class="p-2 bg-blue-700 border-2 border-blue-400 rounded-md justify-self-center text-blue-50 text hover:bg-blue-500 hover:text-blue-50 w-max"
+    >
+      Generate
+    </button>
+    <button
+      v-on:click="$emit('doppelganger')"
+      class="p-2 bg-blue-700 border-2 border-blue-400 rounded-md text-blue-50 text hover:bg-blue-500 hover:text-blue-50 w-max justify-self-center"
+    >
+      Doppelganger
+    </button>
+    <button
+      v-on:click="$emit('download')"
+      class="p-2 bg-blue-700 border-2 border-blue-400 rounded-md text-blue-50 text hover:bg-blue-500 hover:text-blue-50 w-max justify-self-center"
+    >
+      Download
+    </button>
   </div>
 </template>
 

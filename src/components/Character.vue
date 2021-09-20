@@ -1,23 +1,22 @@
 <template>
-  <div class="flex flex-wrap h-full py-2 sm:py-0 gap-y-9 sm:gap-y-0">
-    <div
-      class="grid w-screen mx-2 sm:w-max sm:grid-flow-row sm:auto-rows-max sm:h-full gap-y-9"
-    >
-      <Selector
-        v-on:character-gen="generateCharacter($event)"
-        v-on:doppelganger="doppelganger()"
-        v-on:download="download()"
-      />
-      <Health :health="health" />
-    </div>
+  <div
+    class="flex flex-wrap justify-center sm:justify-start sm:space-x-5 gap-y-9 my-5"
+  >
+    <Selector
+      v-on:character-gen="generateCharacter($event)"
+      v-on:doppelganger="doppelganger()"
+      v-on:download="download()"
+    />
+    <Health :health="health" />
     <Attributes :attributes="attributes" />
     <Saves :saves="saves" />
     <Equipment
+      class=""
       v-on:update-equipment="updateEquipment($event)"
       :equipment="equipment"
       :character-class="characterClass"
     />
-    <Skills :skills="skills" />
+    <Skills class="" :skills="skills" />
   </div>
 </template>
 
