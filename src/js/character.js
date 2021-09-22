@@ -35,7 +35,10 @@ export class Character {
   toString() {
     let equipmentString = `--------Equipment List--------\n`;
     this.equipmentList.forEach(equipment => {
-      equipmentString += `${equipment.name}\n`;
+      equipmentString += `${equipment.name} - ${equipment.rare ? "RARE" : ""} ${
+        equipment.light ? "LIGHT" : ""
+      }\n`;
+      equipmentString += `${equipment.description}\n\n`;
     });
     equipmentString += `\n`;
     return (

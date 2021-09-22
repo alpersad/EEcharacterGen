@@ -27,11 +27,7 @@
             <option
               v-for="(equipment, index) in adventure_gear"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -40,11 +36,7 @@
             <option
               v-for="(equipment, index) in armour"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -53,11 +45,7 @@
             <option
               v-for="(equipment, index) in melee_weapons"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -66,11 +54,7 @@
             <option
               v-for="(equipment, index) in ranged_weapons"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -79,11 +63,7 @@
             <option
               v-for="(equipment, index) in vehicles"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -92,11 +72,7 @@
             <option
               v-for="(equipment, index) in social_advantages"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -105,11 +81,7 @@
             <option
               v-for="(equipment, index) in grimoires"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -141,11 +113,7 @@
             <option
               v-for="(equipment, index) in adventure_gear"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -176,11 +144,7 @@
             <option
               v-for="(equipment, index) in armour"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -189,11 +153,7 @@
             <option
               v-for="(equipment, index) in melee_weapons"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
@@ -202,11 +162,7 @@
             <option
               v-for="(equipment, index) in ranged_weapons"
               :key="index"
-              :value="{
-                name: equipment.name,
-                rarity: equipment.rare,
-                light: equipment.light
-              }"
+              :value="equipment"
             >
               {{ equipment.name }}
             </option>
