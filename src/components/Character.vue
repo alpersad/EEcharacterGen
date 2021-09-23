@@ -11,10 +11,9 @@
     <Attributes :attributes="attributes" />
     <Saves :saves="saves" />
     <Equipment
-      class=""
       v-on:update-equipment="updateEquipment($event)"
       :equipment="equipment"
-      :character-class="characterClass"
+      :character-class="charclass"
     />
     <Skills class="" :skills="skills" />
   </div>
@@ -49,7 +48,7 @@ export default {
   data() {
     return {
       character: {},
-      class: null
+      charclass: null
     };
   },
   computed: {
@@ -197,7 +196,7 @@ export default {
   },
   methods: {
     generateCharacter(characterClass) {
-      this.class = characterClass;
+      this.charclass = characterClass;
       switch (characterClass) {
         case "Bodyguard":
           this.character = new Bodyguard();
@@ -229,7 +228,7 @@ export default {
       console.log(this.character.toString());
     },
     doppelganger() {
-      if (!this.class) {
+      if (!this.charclass) {
         // prevent doppelganger when no character class is generated
         return;
       }
@@ -239,7 +238,7 @@ export default {
       this.$forceUpdate();
     },
     download() {
-      if (!this.class) {
+      if (!this.charclass) {
         // prevent download when no character class is generated
         return;
       }
