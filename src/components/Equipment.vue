@@ -91,7 +91,7 @@
     </div>
 
     <!-- Criminal -->
-    <div v-if="isCriminal" class="grid justify-center gap-y-2">
+    <div v-show="isCriminal" class="grid justify-center gap-y-2">
       <section-title>
         Criminal Bonus
       </section-title>
@@ -122,7 +122,7 @@
       </div>
     </div>
     <!-- Mercenary -->
-    <div v-if="isMercenary" class="grid justify-center gap-y-2">
+    <div v-show="isMercenary" class="grid justify-center gap-y-2">
       <section-title>
         Mercenary Bonus
       </section-title>
