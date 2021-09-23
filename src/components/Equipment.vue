@@ -122,54 +122,57 @@
       </div>
     </div>
     <!-- Mercenary -->
-    <div v-show="isMercenary" class="grid justify-center gap-y-2">
-      <section-title>
-        Mercenary Bonus
-      </section-title>
-      <div class="grid grid-cols-5" v-for="n in 2" :key="n">
-        <div class="sm:inline-block flex flex-col space-x-2 col-span-1 w-max">
-          <Chip
-            :class="rarity(equipment + n - 1) ? 'bg-yellow-300' : 'invisible'"
-            >rare</Chip
+    <template v-if="isMercenary">
+      <div class="grid justify-center gap-y-2">
+        <section-title>
+          Mercenary Bonus
+        </section-title>
+        <div class="grid grid-cols-5" v-for="n in 2" :key="n">
+          <div class="sm:inline-block flex flex-col space-x-2 col-span-1 w-max">
+            <Chip
+              :class="rarity(equipment + n - 1) ? 'bg-yellow-300' : 'invisible'"
+              >rare</Chip
+            >
+            <Chip
+              :class="light(equipment + n - 1) ? 'bg-blue-300' : 'invisible'"
+              >light</Chip
+            >
+          </div>
+          <select
+            class="p-2 ml-2 col-span-4 text-gray-100 bg-black border-2 border-gray-200"
+            v-model="equipmentList[equipment + n - 1]"
           >
-          <Chip :class="light(equipment + n - 1) ? 'bg-blue-300' : 'invisible'"
-            >light</Chip
-          >
+            <optgroup label="Armour">
+              <option
+                v-for="(equipment, index) in armour"
+                :key="index"
+                :value="equipment"
+              >
+                {{ equipment.name }}
+              </option>
+            </optgroup>
+            <optgroup label="Melee Weapons">
+              <option
+                v-for="(equipment, index) in melee_weapons"
+                :key="index"
+                :value="equipment"
+              >
+                {{ equipment.name }}
+              </option>
+            </optgroup>
+            <optgroup label="Ranged Weapons">
+              <option
+                v-for="(equipment, index) in ranged_weapons"
+                :key="index"
+                :value="equipment"
+              >
+                {{ equipment.name }}
+              </option>
+            </optgroup>
+          </select>
         </div>
-        <select
-          class="p-2 ml-2 col-span-4 text-gray-100 bg-black border-2 border-gray-200"
-          v-model="equipmentList[equipment + n - 1]"
-        >
-          <optgroup label="Armour">
-            <option
-              v-for="(equipment, index) in armour"
-              :key="index"
-              :value="equipment"
-            >
-              {{ equipment.name }}
-            </option>
-          </optgroup>
-          <optgroup label="Melee Weapons">
-            <option
-              v-for="(equipment, index) in melee_weapons"
-              :key="index"
-              :value="equipment"
-            >
-              {{ equipment.name }}
-            </option>
-          </optgroup>
-          <optgroup label="Ranged Weapons">
-            <option
-              v-for="(equipment, index) in ranged_weapons"
-              :key="index"
-              :value="equipment"
-            >
-              {{ equipment.name }}
-            </option>
-          </optgroup>
-        </select>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
