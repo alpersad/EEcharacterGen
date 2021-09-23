@@ -72,7 +72,8 @@ export class Occultist extends Character {
       `Often, they don’t even look human enough to blend into a crowd.\n` +
       `They can’t work in any but the shadiest  industries,  and  can’t  interact  with  most  humans without  attracting  unwanted  attention.\n` +
       `Because  of  this,  a Spook’s Resources Level doesn’t rise to match their level;\n` +
-      `it stays at a default of 1 instead, regardless of their level.\n\n``*******Monstrous  Powers********\n` +
+      `it stays at a default of 1 instead, regardless of their level.\n\n` +
+      `*******Monstrous  Powers********\n` +
       `Every  Spook  possesses  innate supernatural  abilities,  and  develop  more  as  they  grow  in power.\n` +
       `These abilities are classified as Monstrous Powers, and provide the character a benefit that is either always active, or else can be used whenever they wish\n` +
       `At first level, they have a single Monstrous Power.\n` +
