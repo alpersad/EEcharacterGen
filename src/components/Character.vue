@@ -245,7 +245,7 @@ export default {
       let blob = new Blob([this.character.toString()], {
         type: "text/plain;charset=utf-8"
       });
-      saveAs(blob, `${this.class}.txt`);
+      saveAs(blob, `${this.charclass}.txt`);
     },
     updateEquipment(equipment) {
       this.character.equipmentList = equipment;

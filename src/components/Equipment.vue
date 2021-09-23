@@ -212,7 +212,7 @@ export default {
   methods: {
     rarity(index) {
       if (this.equipmentList[index]) {
-        return this.equipmentList[index].rarity;
+        return this.equipmentList[index].rare;
       }
       return false;
     },
