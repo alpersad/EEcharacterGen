@@ -13,7 +13,7 @@
     <Equipment
       v-on:update-equipment="updateEquipment($event)"
       :equipment="equipment"
-      :character-class="charclass"
+      :charclass="charclass"
     />
     <Skills class="" :skills="skills" />
   </div>

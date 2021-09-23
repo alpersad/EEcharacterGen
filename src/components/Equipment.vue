@@ -191,7 +191,7 @@ import Chip from "./common/chip.vue";
 import SectionTitle from "./common/section-title.vue";
 
 export default {
-  props: ["equipment", "characterClass"],
+  props: ["equipment", "charclass"],
   components: {
     Chip,
     "section-title": SectionTitle
@@ -225,10 +225,10 @@ export default {
   },
   computed: {
     isCriminal: function() {
-      return this.characterClass == "Criminal";
+      return this.charclass == "Criminal";
     },
     isMercenary: function() {
-      return this.characterClass == "Mercenary";
+      return this.charclass == "Mercenary";
     }
   },
   watch: {
